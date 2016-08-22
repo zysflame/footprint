@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  第二个项目
+//
+//  Created by qingyun on 16/8/16.
+//  Copyright © 2016年 qingyun. All rights reserved.
+//
+
+/** YSScreenSize */
+#define YSScreenSize [[UIScreen mainScreen] bounds].size
+#define YSScreenWidth YSScreenSize.width
+#define YSScreenHeight YSScreenSize.height
+
+#define YSColorWithRGB(redValue, greenValue, blueValue) ([UIColor colorWithRed:((redValue)/255.0) green:((greenValue)/255.0) blue:((blueValue)/255.0) alpha:1])
+#define YSColorRandom YSColorWithRGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#define YSColorFromHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+/** 添加约束的框架*/
+#import "Masonry.h"
+/** 网络加载图片*/
+#import "UIImageView+WebCache.h"
+///** 计算时间的类*/
+#import "NSString+QYString.h"
+/** 小码哥的JSON 解析*/
+#import <MJExtension.h>
+/** 网络请求*/
+#import "AFNetWorking.h"
+//#import "YSHTTPRequest.h"
+
+/** 下拉刷新的框架*/
+#import "MJRefresh.h"
+#import "UIScrollView+PINRefresh.h"
+
+#import "AVOSCloud/AVOSCloud.h" // 这个是LeanStorage 的配置时头文件
