@@ -7,24 +7,26 @@
 //
 
 #import "YSProfileViewController.h"
-
 #import "YSProfileInfoViewController.h"
 
-#import "YSProFileHeader.h"
+#import "YSLoginViewController.h"
 
-@interface YSProfileViewController () <UITableViewDelegate,UITableViewDataSource>
+#import "YSProfileHeader.h"
+
+@interface YSProfileViewController () <UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
 /** 存放标题的数组*/
 @property (nonatomic,copy) NSArray *arrTitles;
-
+@property (nonatomic, strong) UIImage *headerImage;
+@property (nonatomic, weak) UIButton *headerBtn;
 @end
 
 @implementation YSProfileViewController
 
 - (NSArray *)arrTitles{
     if (!_arrTitles) {
-        _arrTitles = @[@"资料设置",@"清除缓存",@"帮助",@"功能介绍",@"退出"];
+        _arrTitles = @[@"资料设置",@"清除缓存",@"帮助",@"功能介绍",@"切换账号",@"退出程序"];
     }
     return _arrTitles;
 }
@@ -50,18 +52,30 @@
     tableView.delegate = self;
     self.tableView = tableView;
     
-    YSProFileHeader *infoView = [YSProFileHeader profileHeaderView];
+    YSProfileHeader *infoView = [YSProfileHeader profileHeaderView];
+     __weak typeof(self) weakSelf = self;
+    [infoView setBlkClickTheHeaderBtn:^(UIButton *button) {
+//        NSLog(@"点击了头像按钮");
+        weakSelf.headerBtn = button;
+        UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
+        pickerVC.delegate = (id)self;
+        pickerVC.allowsEditing = NO;
+        pickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [weakSelf presentViewController:pickerVC animated:YES completion:nil];
+        
+        
+    }];
     tableView.tableHeaderView = infoView;
     
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
-        return self.arrTitles.count -1;
+        return self.arrTitles.count - 2;
     }else{
         return 1;
     }
@@ -77,11 +91,17 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (indexPath.section == 0) {
         cell.textLabel.text = self.arrTitles[indexPath.row];
+    }else if (indexPath.section == 1){
+        cell.textLabel.textColor = [UIColor redColor];
+        cell.textLabel.font = [UIFont systemFontOfSize:20 weight:0.5];
+        NSUInteger count = self.arrTitles.count;
+        cell.textLabel.text = [self.arrTitles objectAtIndex:count - 2];
     }else{
         cell.textLabel.textColor = [UIColor redColor];
         cell.textLabel.font = [UIFont systemFontOfSize:20 weight:0.5];
         cell.textLabel.text = [self.arrTitles lastObject];
     }
+    
     return cell;
 }
 
@@ -105,6 +125,12 @@
         }
         
     }else if (indexPath.section == 1){
+        NSLog(@"退出登录");
+        // 退出账号登录的操作；
+        YSLoginViewController *loginVC = [YSLoginViewController new];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        
+    }else if (indexPath.section == 2){
         // 退出程序的操作
         exit(0);
         //        [UIView animateWithDuration:1 animations:^{
@@ -112,6 +138,7 @@
         //        } completion:^(BOOL finished) {
         //            exit(0);
         //        }];
+        
     }
 }
 
@@ -142,6 +169,13 @@
     
     [alertContorller addAction:alertAction];
     [self presentViewController:alertContorller animated:YES completion:nil];
+}
+
+#pragma mark  > UIImagePickerControllerDelegate <
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIImage *getimage = info[UIImagePickerControllerOriginalImage];
+    [self.headerBtn setBackgroundImage:getimage forState:UIControlStateNormal];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 

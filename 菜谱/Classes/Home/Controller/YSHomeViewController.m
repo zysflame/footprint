@@ -13,6 +13,9 @@
 
 #import "YSHomeListModel.h"
 
+#import "YSStatusCell.h"
+
+
 static NSInteger page = 1;
 @interface YSHomeViewController () <UITableViewDelegate,UITableViewDataSource>
 /** tableView 视图*/
@@ -82,7 +85,7 @@ static NSInteger page = 1;
             YSHomeListModel *homeListModel = [YSHomeListModel homeListModelWithDictionary:dicList];
             [weakSelf.arrMData addObject:homeListModel];
         }
-        NSLog(@">>>>>arrData %ld",weakSelf.arrMData.count);
+        NSLog(@">>>>>arrData %ld",(unsigned long)weakSelf.arrMData.count);
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView reloadData];
         });
@@ -122,13 +125,8 @@ static NSInteger page = 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *strID = @"strIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:strID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:strID];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%lu----%lu",indexPath.section,indexPath.row];
-    return cell; 
+    YSStatusCell *statusCell = [YSStatusCell cellWithTableView:tableView];
+    return statusCell;
 }
 
 - (void)didReceiveMemoryWarning {

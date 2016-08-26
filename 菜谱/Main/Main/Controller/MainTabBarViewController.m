@@ -41,17 +41,17 @@
 
 - (void)loadTabBarController{
     YSHomeViewController *HomeVC = [YSHomeViewController new];
-    [self addViewController:HomeVC WithImageName:@"tabbar_home" Title:@"热门"];
+    [self addViewController:HomeVC WithImageName:@"tabbar_hote" Title:@"热门"];
     
     YSDynamicViewController *dynamicVC = [YSDynamicViewController new];
-    [self addViewController:dynamicVC WithImageName:@"tabbar_menu" Title:@"动态"];
+    [self addViewController:dynamicVC WithImageName:@"tabbar_menu" Title:@"个人动态"];
 
     YSDiscoverViewController *discoverVC = [YSDiscoverViewController new];
-    [self addViewController:discoverVC WithImageName:@"tabar_discover" Title:@"发现"];
+    [self addViewController:discoverVC WithImageName:@"tabar_discover" Title:@"附近的人"];
     [UIImage imageNamed:@"tabbar_menu"];
     
     YSProfileViewController *profileVC = [YSProfileViewController new];
-    [self addViewController:profileVC WithImageName:@"tabbar_profile" Title:@"我的"];
+    [self addViewController:profileVC WithImageName:@"tabbar_profile" Title:@"我的设置"];
     
     // 创建自己的TabBar
     YSTabBar *tabBar = [YSTabBar new];
@@ -64,7 +64,7 @@
         YSAddViewController *addVC = [YSAddViewController new];
         YSNavigationViewController *naviVC = [[YSNavigationViewController alloc] initWithRootViewController:addVC];
         [weakSelf presentViewController:naviVC animated:YES completion:nil];
-        NSLog(@"点击了加号按钮");
+//        NSLog(@"点击了加号按钮");
     }];
     [self setValue:tabBar forKey:@"tabBar"];
 }

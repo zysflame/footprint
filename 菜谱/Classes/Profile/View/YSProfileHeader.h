@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSProFileHeader : UIView
+@interface YSProfileHeader : UIView
+
+@property (nonatomic, strong) void(^blkClickTheHeaderBtn)(UIButton *button);
 
 + (instancetype)profileHeaderView;
 

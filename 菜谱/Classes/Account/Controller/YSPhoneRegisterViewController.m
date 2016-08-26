@@ -15,7 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *txfYanZhengMa;
 @property (weak, nonatomic) IBOutlet UITextField *txfFirstPwd;
-@property (weak, nonatomic) IBOutlet UITextField *txfSecPwd;
 
 @end
 
@@ -48,17 +47,18 @@
         }
     }];
 }
+#pragma mark  > 注册按钮触发的事件 <
 - (IBAction)zhuCeBtn:(UIButton *)sender {
     if (self.txfPhoneNum.text == nil || self.txfFirstPwd.text == nil ) {
         return;
-    }else if([self.txfFirstPwd.text isEqualToString:self.txfSecPwd.text]){
-        [AVUser verifyMobilePhone:self.txfYanZhengMa.text withBlock:^(BOOL succeeded, NSError *error) {
-            if(succeeded){
-                //验证成功
-                NSLog(@"注册成功");
-            }
-        }];
     }
+    AVUser *user = [AVUser user];
+    user.username = self.txfPhoneNum.text;
+    user.password = self.txfFirstPwd.text;
+//    user.email = @"hang@leancloud.rocks";
+    user.mobilePhoneNumber = self.txfPhoneNum.text;
+    NSError *error = nil;
+    [user signUp:&error];
     
 }
 

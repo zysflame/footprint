@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSRegisterViewController : UIViewController
+@interface YSEMaileRegisterViewController : UIViewController
 
 @end

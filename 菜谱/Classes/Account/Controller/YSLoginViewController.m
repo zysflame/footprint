@@ -8,7 +8,7 @@
 
 #import "YSLoginViewController.h"
 #import "MainTabBarViewController.h"
-#import "YSRegisterViewController.h"
+#import "YSEMaileRegisterViewController.h"
 
 @interface YSLoginViewController ()
 
@@ -32,14 +32,13 @@
 #pragma mark  > 注册按钮触发的方法 <
 - (IBAction)ZhuCeBtn:(UIButton *)sender {
     
-    
-    
-    YSRegisterViewController *registerVC = [YSRegisterViewController new];
+    YSEMaileRegisterViewController *registerVC = [YSEMaileRegisterViewController new];
     [self.navigationController pushViewController:registerVC animated:YES];
 }
 
 #pragma mark  > 忘记密码的操作 <
 - (IBAction)forgetThePassWordBtn:(UIButton *)sender {
+    NSLog(@">>>>%s",__func__);
 }
 
 #pragma mark  > 登录按钮 <
@@ -65,6 +64,17 @@
             weakSelf.txfPWD.text = nil;
         } else {
             NSLog(@"登录失败>>>%@",error);
+            __weak typeof(self) weakSelf = self;
+            UIAlertController *alertContorller = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"登录失败请重试。。。" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+                [weakSelf.navigationController popViewControllerAnimated:YES];
+            }];
+            UIAlertAction *alertDengLuAction = [UIAlertAction actionWithTitle:@"刷新试试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                NSLog(@"刷新了一下");
+            }];
+            [alertContorller addAction:alertDengLuAction];
+            [alertContorller addAction:alertAction];
+            [self presentViewController:alertContorller animated:YES completion:nil];
         }
     }];
 
@@ -72,10 +82,12 @@
 
 #pragma mark  > qq 账号登录 <
 - (IBAction)QQLoginBtn:(UIButton *)sender {
+    NSLog(@">>>>qq账号登录%s",__func__);
 }
 
 #pragma mark  > 新浪微博账号登录 <
 - (IBAction)sinaLoginBtn:(UIButton *)sender {
+    NSLog(@">>>>微博账号登录%s",__func__);
 }
 
 #pragma mark  > 点击屏幕后编辑结束 <

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YSRegisterViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YSEMaileRegisterViewController">
             <connections>
                 <outlet property="txfFirstPwd" destination="ebv-sY-Pkd" id="oco-iT-HqS"/>
                 <outlet property="txfSecPwd" destination="oLk-oY-goF" id="qcW-Wn-cI6"/>
@@ -142,8 +142,10 @@
                 <constraint firstItem="9sg-II-zaM" firstAttribute="top" secondItem="AYI-RU-PwL" secondAttribute="bottom" constant="30" id="R2B-Qx-SyF"/>
                 <constraint firstItem="rEz-Cc-DFA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="SlT-V0-4R7"/>
                 <constraint firstItem="Bdk-2R-wPC" firstAttribute="top" secondItem="5eZ-n4-Usn" secondAttribute="bottom" constant="16" id="UD7-YI-hkZ"/>
+                <constraint firstItem="ebv-sY-Pkd" firstAttribute="top" secondItem="9sg-II-zaM" secondAttribute="top" id="Wrt-oY-fwJ"/>
                 <constraint firstAttribute="trailing" secondItem="rEz-Cc-DFA" secondAttribute="trailing" constant="32" id="Z9o-VS-b7g"/>
                 <constraint firstItem="3JE-Dk-5He" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="ajq-KQ-TBP"/>
+                <constraint firstItem="9sg-II-zaM" firstAttribute="top" secondItem="AYI-RU-PwL" secondAttribute="bottom" constant="30" id="cH3-wG-wDU"/>
                 <constraint firstItem="ebv-sY-Pkd" firstAttribute="leading" secondItem="gD0-ff-f7U" secondAttribute="leading" id="fdJ-ix-Kuz"/>
                 <constraint firstItem="3JE-Dk-5He" firstAttribute="top" secondItem="9sg-II-zaM" secondAttribute="bottom" constant="30" id="kmk-4f-pxN"/>
                 <constraint firstAttribute="trailing" secondItem="Bdk-2R-wPC" secondAttribute="trailing" constant="8" id="lu1-6Z-6jP"/>
@@ -154,6 +156,8 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="R2B-Qx-SyF"/>
+                    <exclude reference="4wy-88-8OR"/>
                     <exclude reference="6OL-xN-MuW"/>
                     <exclude reference="Fvq-gJ-bI2"/>
                 </mask>

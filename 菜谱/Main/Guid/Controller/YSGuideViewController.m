@@ -34,7 +34,7 @@
         NSUInteger count = 6;
         NSMutableArray *arrMImages = [NSMutableArray arrayWithCapacity:count];
         for (NSUInteger index = 0; index < count; index ++) {
-            NSString *strName = [NSString stringWithFormat:@"beiJing_%lu",index];
+            NSString *strName = [NSString stringWithFormat:@"beiJing_%lu",(unsigned long)index];
             [arrMImages addObject:strName];
         }
         _arrBackImages = [arrMImages copy];

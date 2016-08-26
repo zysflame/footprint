@@ -8,7 +8,11 @@
 
 #import "YSDynamicViewController.h"
 
-@interface YSDynamicViewController ()
+#import "YSStatusCell.h"
+
+@interface YSDynamicViewController () <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, weak) UITableView *tableView;
 
 @end
 
@@ -21,13 +25,28 @@
 
 #pragma mark 加载默认设置
 - (void)loadDefaultSetting{
-    self.view.backgroundColor = YSColorRandom;
-    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(80, 100, 200, 200)];
-    [self.view addSubview:lable];
-    lable.numberOfLines = 0;
-    lable.text = @"展示关注的好友的动态，以及自己发表的动态";
+    self.view.backgroundColor = [UIColor greenColor];
+//    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(80, 100, 200, 200)];
+//    [self.view addSubview:lable];
+//    lable.numberOfLines = 0;
+//    lable.text = @"展示关注的好友的动态，以及自己发表的动态";
+    
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [self.view addSubview:tableView];
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    self.tableView = tableView;
 }
 
+#pragma mark  > UITableViewDataSource -- UITableViewDelegate<
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 50;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    YSStatusCell *statusCell = [YSStatusCell cellWithTableView:tableView];
+    return statusCell;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

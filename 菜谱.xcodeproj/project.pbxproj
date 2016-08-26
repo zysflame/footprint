@@ -19,8 +19,9 @@
 		CC2326881D66FFC8000EDC4B /* UIScrollView+PINExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CC23267B1D66FFC8000EDC4B /* UIScrollView+PINExtension.m */; };
 		CC2326891D66FFC8000EDC4B /* UIScrollView+PINRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CC23267D1D66FFC8000EDC4B /* UIScrollView+PINRefresh.m */; };
 		CC23268A1D66FFC8000EDC4B /* UIView+PINFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CC23267F1D66FFC8000EDC4B /* UIView+PINFrame.m */; };
-		CC234D941D66F11D00FE939B /* YSHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC234D931D66F11D00FE939B /* YSHomeListModel.m */; };
-		CC234D971D66F5E400FE939B /* YSHomeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC234D961D66F5E400FE939B /* YSHomeInfoViewController.m */; };
+		CC2D6C3A1D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */; };
+		CC3194DB1D6DDCA70061DF76 /* YSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3194D91D6DDCA70061DF76 /* YSStatusCell.m */; };
+		CC3194DC1D6DDCA70061DF76 /* YSStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3194DA1D6DDCA70061DF76 /* YSStatusCell.xib */; };
 		CC3EB71F1D63F7EF000E775B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB71E1D63F7EF000E775B /* main.m */; };
 		CC3EB7281D63F7EF000E775B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3EB7261D63F7EF000E775B /* Main.storyboard */; };
 		CC3EB72D1D63F7EF000E775B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3EB72B1D63F7EF000E775B /* LaunchScreen.storyboard */; };
@@ -30,21 +31,31 @@
 		CC3EB75C1D63F99A000E775B /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7511D63F99A000E775B /* MainTabBarViewController.m */; };
 		CC3EB75D1D63F99A000E775B /* YSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7531D63F99A000E775B /* YSNavigationViewController.m */; };
 		CC3EB75E1D63F99A000E775B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3EB7571D63F99A000E775B /* Assets.xcassets */; };
-		CC3EB7661D6408C9000E775B /* YSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7651D6408C9000E775B /* YSHomeViewController.m */; };
-		CC3EB7691D6408F9000E775B /* YSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7681D6408F9000E775B /* YSProfileViewController.m */; };
-		CC3EB7771D640A8D000E775B /* YSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7751D640A8D000E775B /* YSRegisterViewController.m */; };
-		CC3EB77C1D640ADD000E775B /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB77A1D640ADD000E775B /* YSLoginViewController.m */; };
-		CC3EB7801D640C1E000E775B /* YSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3EB77E1D640C1E000E775B /* YSLoginViewController.xib */; };
-		CC3EB7811D640C1E000E775B /* YSRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3EB77F1D640C1E000E775B /* YSRegisterViewController.xib */; };
 		CC3EB7871D64861F000E775B /* YSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7861D64861F000E775B /* YSTabBar.m */; };
-		CC3EB7921D6486F0000E775B /* YSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB78F1D6486EF000E775B /* YSDiscoverViewController.m */; };
-		CC3EB7991D6487E8000E775B /* YSDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7981D6487E8000E775B /* YSDynamicViewController.m */; };
-		CC3EB79C1D648814000E775B /* YSAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB79B1D648814000E775B /* YSAddViewController.m */; };
-		CC63CF0C1D69D29400C52E63 /* YSProfileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC63CF0B1D69D29400C52E63 /* YSProfileInfoViewController.m */; };
-		CC63CF0F1D69D51500C52E63 /* YSProFileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CC63CF0E1D69D51500C52E63 /* YSProFileHeader.m */; };
-		CC63CF111D69D52500C52E63 /* YSProFileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC63CF101D69D52500C52E63 /* YSProFileHeader.xib */; };
-		CC7251BE1D65F15C00639FB7 /* YSPhoneRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7251BC1D65F15C00639FB7 /* YSPhoneRegisterViewController.m */; };
-		CC7251C11D65F17700639FB7 /* YSPhoneRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC7251C01D65F17700639FB7 /* YSPhoneRegisterViewController.xib */; };
+		CC75282E1D6EEB570024D105 /* YSInfoDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */; };
+		CCDFBAEC1D6DC5C9000A16C9 /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */; };
+		CCDFBAED1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */; };
+		CCDFBAEE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBABF1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m */; };
+		CCDFBAEF1D6DC5C9000A16C9 /* YSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */; };
+		CCDFBAF01D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAC31D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib */; };
+		CCDFBAF11D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */; };
+		CCDFBAF21D6DC5C9000A16C9 /* YSAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBAC81D6DC5C9000A16C9 /* YSAddViewController.m */; };
+		CCDFBAF31D6DC5C9000A16C9 /* YSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBACE1D6DC5C9000A16C9 /* YSDiscoverViewController.m */; };
+		CCDFBAF41D6DC5C9000A16C9 /* YSDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBAD41D6DC5C9000A16C9 /* YSDynamicViewController.m */; };
+		CCDFBAF51D6DC5C9000A16C9 /* YSHomeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBADA1D6DC5C9000A16C9 /* YSHomeInfoViewController.m */; };
+		CCDFBAF61D6DC5C9000A16C9 /* YSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBADC1D6DC5C9000A16C9 /* YSHomeViewController.m */; };
+		CCDFBAF71D6DC5C9000A16C9 /* YSHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBADF1D6DC5C9000A16C9 /* YSHomeListModel.m */; };
+		CCDFBAF81D6DC5C9000A16C9 /* YSProfileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBAE41D6DC5C9000A16C9 /* YSProfileInfoViewController.m */; };
+		CCDFBAF91D6DC5C9000A16C9 /* YSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBAE61D6DC5C9000A16C9 /* YSProfileViewController.m */; };
+		CCDFBAFA1D6DC5C9000A16C9 /* YSProfileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBAEA1D6DC5C9000A16C9 /* YSProfileHeader.m */; };
+		CCDFBAFB1D6DC5C9000A16C9 /* YSProfileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAEB1D6DC5C9000A16C9 /* YSProfileHeader.xib */; };
+		CCDFBB051D6DC607000A16C9 /* YSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBAFD1D6DC607000A16C9 /* YSCommentCell.m */; };
+		CCDFBB061D6DC607000A16C9 /* YSCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAFE1D6DC607000A16C9 /* YSCommentCell.xib */; };
+		CCDFBB071D6DC607000A16C9 /* YSFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB001D6DC607000A16C9 /* YSFooterView.m */; };
+		CCDFBB081D6DC607000A16C9 /* YSFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBB011D6DC607000A16C9 /* YSFooterView.xib */; };
+		CCDFBB111D6DC65E000A16C9 /* YSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB0C1D6DC65E000A16C9 /* YSCommentModel.m */; };
+		CCDFBB121D6DC65E000A16C9 /* YSStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB0E1D6DC65E000A16C9 /* YSStatusModel.m */; };
+		CCDFBB131D6DC65E000A16C9 /* YSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB101D6DC65E000A16C9 /* YSUserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,10 +83,11 @@
 		CC23267D1D66FFC8000EDC4B /* UIScrollView+PINRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PINRefresh.m"; sourceTree = "<group>"; };
 		CC23267E1D66FFC8000EDC4B /* UIView+PINFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PINFrame.h"; sourceTree = "<group>"; };
 		CC23267F1D66FFC8000EDC4B /* UIView+PINFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PINFrame.m"; sourceTree = "<group>"; };
-		CC234D921D66F11D00FE939B /* YSHomeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeListModel.h; sourceTree = "<group>"; };
-		CC234D931D66F11D00FE939B /* YSHomeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeListModel.m; sourceTree = "<group>"; };
-		CC234D951D66F5E400FE939B /* YSHomeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeInfoViewController.h; sourceTree = "<group>"; };
-		CC234D961D66F5E400FE939B /* YSHomeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeInfoViewController.m; sourceTree = "<group>"; };
+		CC2D6C381D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneNumYanZhengVC.h; sourceTree = "<group>"; };
+		CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneNumYanZhengVC.m; sourceTree = "<group>"; };
+		CC3194D81D6DDCA70061DF76 /* YSStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSStatusCell.h; sourceTree = "<group>"; };
+		CC3194D91D6DDCA70061DF76 /* YSStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSStatusCell.m; sourceTree = "<group>"; };
+		CC3194DA1D6DDCA70061DF76 /* YSStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSStatusCell.xib; sourceTree = "<group>"; };
 		CC3EB71A1D63F7EF000E775B /* 菜谱.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "菜谱.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3EB71E1D63F7EF000E775B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC3EB7271D63F7EF000E775B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,32 +105,50 @@
 		CC3EB7531D63F99A000E775B /* YSNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSNavigationViewController.m; sourceTree = "<group>"; };
 		CC3EB7571D63F99A000E775B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3EB7581D63F99A000E775B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		CC3EB7641D6408C9000E775B /* YSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeViewController.h; sourceTree = "<group>"; };
-		CC3EB7651D6408C9000E775B /* YSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeViewController.m; sourceTree = "<group>"; };
-		CC3EB7671D6408F9000E775B /* YSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSProfileViewController.h; sourceTree = "<group>"; };
-		CC3EB7681D6408F9000E775B /* YSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSProfileViewController.m; sourceTree = "<group>"; };
-		CC3EB7741D640A8D000E775B /* YSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSRegisterViewController.h; sourceTree = "<group>"; };
-		CC3EB7751D640A8D000E775B /* YSRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSRegisterViewController.m; sourceTree = "<group>"; };
-		CC3EB7791D640ADD000E775B /* YSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginViewController.h; sourceTree = "<group>"; };
-		CC3EB77A1D640ADD000E775B /* YSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginViewController.m; sourceTree = "<group>"; };
-		CC3EB77E1D640C1E000E775B /* YSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSLoginViewController.xib; sourceTree = "<group>"; };
-		CC3EB77F1D640C1E000E775B /* YSRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSRegisterViewController.xib; sourceTree = "<group>"; };
 		CC3EB7851D64861F000E775B /* YSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTabBar.h; sourceTree = "<group>"; };
 		CC3EB7861D64861F000E775B /* YSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSTabBar.m; sourceTree = "<group>"; };
-		CC3EB78E1D6486EF000E775B /* YSDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDiscoverViewController.h; sourceTree = "<group>"; };
-		CC3EB78F1D6486EF000E775B /* YSDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDiscoverViewController.m; sourceTree = "<group>"; };
-		CC3EB7971D6487E8000E775B /* YSDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDynamicViewController.h; sourceTree = "<group>"; };
-		CC3EB7981D6487E8000E775B /* YSDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDynamicViewController.m; sourceTree = "<group>"; };
-		CC3EB79A1D648814000E775B /* YSAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSAddViewController.h; sourceTree = "<group>"; };
-		CC3EB79B1D648814000E775B /* YSAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSAddViewController.m; sourceTree = "<group>"; };
-		CC63CF0A1D69D29400C52E63 /* YSProfileInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSProfileInfoViewController.h; sourceTree = "<group>"; };
-		CC63CF0B1D69D29400C52E63 /* YSProfileInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSProfileInfoViewController.m; sourceTree = "<group>"; };
-		CC63CF0D1D69D51500C52E63 /* YSProFileHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSProFileHeader.h; sourceTree = "<group>"; };
-		CC63CF0E1D69D51500C52E63 /* YSProFileHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSProFileHeader.m; sourceTree = "<group>"; };
-		CC63CF101D69D52500C52E63 /* YSProFileHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSProFileHeader.xib; sourceTree = "<group>"; };
-		CC7251BB1D65F15C00639FB7 /* YSPhoneRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneRegisterViewController.h; sourceTree = "<group>"; };
-		CC7251BC1D65F15C00639FB7 /* YSPhoneRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneRegisterViewController.m; sourceTree = "<group>"; };
-		CC7251C01D65F17700639FB7 /* YSPhoneRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSPhoneRegisterViewController.xib; sourceTree = "<group>"; };
+		CC75282C1D6EEB570024D105 /* YSInfoDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSInfoDynamicViewController.h; sourceTree = "<group>"; };
+		CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSInfoDynamicViewController.m; sourceTree = "<group>"; };
+		CCDFBABA1D6DC5C9000A16C9 /* YSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginViewController.h; sourceTree = "<group>"; };
+		CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginViewController.m; sourceTree = "<group>"; };
+		CCDFBABC1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneRegisterViewController.h; sourceTree = "<group>"; };
+		CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneRegisterViewController.m; sourceTree = "<group>"; };
+		CCDFBABE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMaileRegisterViewController.h; sourceTree = "<group>"; };
+		CCDFBABF1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMaileRegisterViewController.m; sourceTree = "<group>"; };
+		CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSLoginViewController.xib; sourceTree = "<group>"; };
+		CCDFBAC31D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSPhoneRegisterViewController.xib; sourceTree = "<group>"; };
+		CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSEMaileRegisterViewController.xib; sourceTree = "<group>"; };
+		CCDFBAC71D6DC5C9000A16C9 /* YSAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSAddViewController.h; sourceTree = "<group>"; };
+		CCDFBAC81D6DC5C9000A16C9 /* YSAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSAddViewController.m; sourceTree = "<group>"; };
+		CCDFBACD1D6DC5C9000A16C9 /* YSDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDiscoverViewController.h; sourceTree = "<group>"; };
+		CCDFBACE1D6DC5C9000A16C9 /* YSDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDiscoverViewController.m; sourceTree = "<group>"; };
+		CCDFBAD31D6DC5C9000A16C9 /* YSDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDynamicViewController.h; sourceTree = "<group>"; };
+		CCDFBAD41D6DC5C9000A16C9 /* YSDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDynamicViewController.m; sourceTree = "<group>"; };
+		CCDFBAD91D6DC5C9000A16C9 /* YSHomeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeInfoViewController.h; sourceTree = "<group>"; };
+		CCDFBADA1D6DC5C9000A16C9 /* YSHomeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeInfoViewController.m; sourceTree = "<group>"; };
+		CCDFBADB1D6DC5C9000A16C9 /* YSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeViewController.h; sourceTree = "<group>"; };
+		CCDFBADC1D6DC5C9000A16C9 /* YSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeViewController.m; sourceTree = "<group>"; };
+		CCDFBADE1D6DC5C9000A16C9 /* YSHomeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeListModel.h; sourceTree = "<group>"; };
+		CCDFBADF1D6DC5C9000A16C9 /* YSHomeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeListModel.m; sourceTree = "<group>"; };
+		CCDFBAE31D6DC5C9000A16C9 /* YSProfileInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSProfileInfoViewController.h; sourceTree = "<group>"; };
+		CCDFBAE41D6DC5C9000A16C9 /* YSProfileInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSProfileInfoViewController.m; sourceTree = "<group>"; };
+		CCDFBAE51D6DC5C9000A16C9 /* YSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSProfileViewController.h; sourceTree = "<group>"; };
+		CCDFBAE61D6DC5C9000A16C9 /* YSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSProfileViewController.m; sourceTree = "<group>"; };
+		CCDFBAE91D6DC5C9000A16C9 /* YSProfileHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSProfileHeader.h; sourceTree = "<group>"; };
+		CCDFBAEA1D6DC5C9000A16C9 /* YSProfileHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSProfileHeader.m; sourceTree = "<group>"; };
+		CCDFBAEB1D6DC5C9000A16C9 /* YSProfileHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSProfileHeader.xib; sourceTree = "<group>"; };
+		CCDFBAFC1D6DC607000A16C9 /* YSCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCommentCell.h; sourceTree = "<group>"; };
+		CCDFBAFD1D6DC607000A16C9 /* YSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCommentCell.m; sourceTree = "<group>"; };
+		CCDFBAFE1D6DC607000A16C9 /* YSCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSCommentCell.xib; sourceTree = "<group>"; };
+		CCDFBAFF1D6DC607000A16C9 /* YSFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSFooterView.h; sourceTree = "<group>"; };
+		CCDFBB001D6DC607000A16C9 /* YSFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSFooterView.m; sourceTree = "<group>"; };
+		CCDFBB011D6DC607000A16C9 /* YSFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSFooterView.xib; sourceTree = "<group>"; };
+		CCDFBB0B1D6DC65E000A16C9 /* YSCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCommentModel.h; sourceTree = "<group>"; };
+		CCDFBB0C1D6DC65E000A16C9 /* YSCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCommentModel.m; sourceTree = "<group>"; };
+		CCDFBB0D1D6DC65E000A16C9 /* YSStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSStatusModel.h; sourceTree = "<group>"; };
+		CCDFBB0E1D6DC65E000A16C9 /* YSStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSStatusModel.m; sourceTree = "<group>"; };
+		CCDFBB0F1D6DC65E000A16C9 /* YSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUserModel.h; sourceTree = "<group>"; };
+		CCDFBB101D6DC65E000A16C9 /* YSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUserModel.m; sourceTree = "<group>"; };
 		D4E4C20E4F4205211DFEFD82 /* libPods-菜谱.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-菜谱.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -225,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3EB7421D63F99A000E775B /* Main */,
-				CC3EB7351D63F99A000E775B /* Classes */,
+				CCDFBAB71D6DC5C9000A16C9 /* Classes */,
 				CC3EB7341D63F99A000E775B /*  Libraries */,
 				CC3EB7561D63F99A000E775B /* Resource */,
 				CC3EB71D1D63F7EF000E775B /* Supporting Files */,
@@ -251,94 +281,6 @@
 				CC2326691D66FFC8000EDC4B /* PINRefresh */,
 			);
 			path = " Libraries";
-			sourceTree = "<group>";
-		};
-		CC3EB7351D63F99A000E775B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB7361D63F99A000E775B /* Home */,
-				CC3EB7881D6486BE000E775B /* Dynamic */,
-				CC3EB7931D648720000E775B /* Add */,
-				CC3EB78C1D6486EF000E775B /* DisCover */,
-				CC3EB73A1D63F99A000E775B /* Profile */,
-				CC3EB76D1D640A24000E775B /* Account */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		CC3EB7361D63F99A000E775B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB7371D63F99A000E775B /* Controller */,
-				CC3EB7381D63F99A000E775B /* Model */,
-				CC3EB7391D63F99A000E775B /* View */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		CC3EB7371D63F99A000E775B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB7641D6408C9000E775B /* YSHomeViewController.h */,
-				CC3EB7651D6408C9000E775B /* YSHomeViewController.m */,
-				CC234D951D66F5E400FE939B /* YSHomeInfoViewController.h */,
-				CC234D961D66F5E400FE939B /* YSHomeInfoViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CC3EB7381D63F99A000E775B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CC234D921D66F11D00FE939B /* YSHomeListModel.h */,
-				CC234D931D66F11D00FE939B /* YSHomeListModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CC3EB7391D63F99A000E775B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CC3EB73A1D63F99A000E775B /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB73B1D63F99A000E775B /* Controller */,
-				CC3EB73C1D63F99A000E775B /* Model */,
-				CC3EB73D1D63F99A000E775B /* View */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		CC3EB73B1D63F99A000E775B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB7671D6408F9000E775B /* YSProfileViewController.h */,
-				CC3EB7681D6408F9000E775B /* YSProfileViewController.m */,
-				CC63CF0A1D69D29400C52E63 /* YSProfileInfoViewController.h */,
-				CC63CF0B1D69D29400C52E63 /* YSProfileInfoViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CC3EB73C1D63F99A000E775B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CC3EB73D1D63F99A000E775B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CC63CF0D1D69D51500C52E63 /* YSProFileHeader.h */,
-				CC63CF0E1D69D51500C52E63 /* YSProFileHeader.m */,
-				CC63CF101D69D52500C52E63 /* YSProFileHeader.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		CC3EB7421D63F99A000E775B /* Main */ = {
@@ -441,141 +383,248 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		CC3EB76D1D640A24000E775B /* Account */ = {
+		CCDFBAB71D6DC5C9000A16C9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CC3EB76E1D640A24000E775B /* Controller */,
-				CC3EB76F1D640A24000E775B /* Model */,
-				CC3EB7701D640A24000E775B /* View */,
+				CCDFBAD71D6DC5C9000A16C9 /* Home */,
+				CCDFBAD11D6DC5C9000A16C9 /* Dynamic */,
+				CCDFBAC51D6DC5C9000A16C9 /* Add */,
+				CCDFBACB1D6DC5C9000A16C9 /* DisCover */,
+				CCDFBAE11D6DC5C9000A16C9 /* Profile */,
+				CCDFBAB81D6DC5C9000A16C9 /* Account */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CCDFBAB81D6DC5C9000A16C9 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBAB91D6DC5C9000A16C9 /* Controller */,
+				CCDFBAC01D6DC5C9000A16C9 /* Model */,
+				CCDFBAC11D6DC5C9000A16C9 /* View */,
 			);
 			path = Account;
 			sourceTree = "<group>";
 		};
-		CC3EB76E1D640A24000E775B /* Controller */ = {
+		CCDFBAB91D6DC5C9000A16C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC3EB7791D640ADD000E775B /* YSLoginViewController.h */,
-				CC3EB77A1D640ADD000E775B /* YSLoginViewController.m */,
-				CC3EB7741D640A8D000E775B /* YSRegisterViewController.h */,
-				CC3EB7751D640A8D000E775B /* YSRegisterViewController.m */,
-				CC7251BB1D65F15C00639FB7 /* YSPhoneRegisterViewController.h */,
-				CC7251BC1D65F15C00639FB7 /* YSPhoneRegisterViewController.m */,
+				CCDFBABA1D6DC5C9000A16C9 /* YSLoginViewController.h */,
+				CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */,
+				CCDFBABE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.h */,
+				CCDFBABF1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m */,
+				CCDFBABC1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.h */,
+				CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */,
+				CC2D6C381D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.h */,
+				CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CC3EB76F1D640A24000E775B /* Model */ = {
+		CCDFBAC01D6DC5C9000A16C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CC3EB7701D640A24000E775B /* View */ = {
+		CCDFBAC11D6DC5C9000A16C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CC3EB77E1D640C1E000E775B /* YSLoginViewController.xib */,
-				CC3EB77F1D640C1E000E775B /* YSRegisterViewController.xib */,
-				CC7251C01D65F17700639FB7 /* YSPhoneRegisterViewController.xib */,
+				CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */,
+				CCDFBAC31D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib */,
+				CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		CC3EB7881D6486BE000E775B /* Dynamic */ = {
+		CCDFBAC51D6DC5C9000A16C9 /* Add */ = {
 			isa = PBXGroup;
 			children = (
-				CC3EB7891D6486BE000E775B /* Controller */,
-				CC3EB78A1D6486BE000E775B /* Model */,
-				CC3EB78B1D6486BE000E775B /* View */,
-			);
-			path = Dynamic;
-			sourceTree = "<group>";
-		};
-		CC3EB7891D6486BE000E775B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB7971D6487E8000E775B /* YSDynamicViewController.h */,
-				CC3EB7981D6487E8000E775B /* YSDynamicViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CC3EB78A1D6486BE000E775B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CC3EB78B1D6486BE000E775B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CC3EB78C1D6486EF000E775B /* DisCover */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB78D1D6486EF000E775B /* Controller */,
-				CC3EB7901D6486EF000E775B /* Model */,
-				CC3EB7911D6486EF000E775B /* View */,
-			);
-			path = DisCover;
-			sourceTree = "<group>";
-		};
-		CC3EB78D1D6486EF000E775B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB78E1D6486EF000E775B /* YSDiscoverViewController.h */,
-				CC3EB78F1D6486EF000E775B /* YSDiscoverViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CC3EB7901D6486EF000E775B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CC3EB7911D6486EF000E775B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CC3EB7931D648720000E775B /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				CC3EB7941D648720000E775B /* Controller */,
-				CC3EB7951D648720000E775B /* Model */,
-				CC3EB7961D648720000E775B /* View */,
+				CCDFBAC61D6DC5C9000A16C9 /* Controller */,
+				CCDFBAC91D6DC5C9000A16C9 /* Model */,
+				CCDFBACA1D6DC5C9000A16C9 /* View */,
 			);
 			path = Add;
 			sourceTree = "<group>";
 		};
-		CC3EB7941D648720000E775B /* Controller */ = {
+		CCDFBAC61D6DC5C9000A16C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC3EB79A1D648814000E775B /* YSAddViewController.h */,
-				CC3EB79B1D648814000E775B /* YSAddViewController.m */,
+				CCDFBAC71D6DC5C9000A16C9 /* YSAddViewController.h */,
+				CCDFBAC81D6DC5C9000A16C9 /* YSAddViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CC3EB7951D648720000E775B /* Model */ = {
+		CCDFBAC91D6DC5C9000A16C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CC3EB7961D648720000E775B /* View */ = {
+		CCDFBACA1D6DC5C9000A16C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDFBACB1D6DC5C9000A16C9 /* DisCover */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBACC1D6DC5C9000A16C9 /* Controller */,
+				CCDFBACF1D6DC5C9000A16C9 /* Model */,
+				CCDFBAD01D6DC5C9000A16C9 /* View */,
+			);
+			path = DisCover;
+			sourceTree = "<group>";
+		};
+		CCDFBACC1D6DC5C9000A16C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBACD1D6DC5C9000A16C9 /* YSDiscoverViewController.h */,
+				CCDFBACE1D6DC5C9000A16C9 /* YSDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCDFBACF1D6DC5C9000A16C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCDFBAD01D6DC5C9000A16C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDFBAD11D6DC5C9000A16C9 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBAD21D6DC5C9000A16C9 /* Controller */,
+				CCDFBAD51D6DC5C9000A16C9 /* Model */,
+				CCDFBAD61D6DC5C9000A16C9 /* View */,
+			);
+			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		CCDFBAD21D6DC5C9000A16C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBAD31D6DC5C9000A16C9 /* YSDynamicViewController.h */,
+				CCDFBAD41D6DC5C9000A16C9 /* YSDynamicViewController.m */,
+				CC75282C1D6EEB570024D105 /* YSInfoDynamicViewController.h */,
+				CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCDFBAD51D6DC5C9000A16C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBB0B1D6DC65E000A16C9 /* YSCommentModel.h */,
+				CCDFBB0C1D6DC65E000A16C9 /* YSCommentModel.m */,
+				CCDFBB0D1D6DC65E000A16C9 /* YSStatusModel.h */,
+				CCDFBB0E1D6DC65E000A16C9 /* YSStatusModel.m */,
+				CCDFBB0F1D6DC65E000A16C9 /* YSUserModel.h */,
+				CCDFBB101D6DC65E000A16C9 /* YSUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCDFBAD61D6DC5C9000A16C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC3194D81D6DDCA70061DF76 /* YSStatusCell.h */,
+				CC3194D91D6DDCA70061DF76 /* YSStatusCell.m */,
+				CC3194DA1D6DDCA70061DF76 /* YSStatusCell.xib */,
+				CCDFBAFC1D6DC607000A16C9 /* YSCommentCell.h */,
+				CCDFBAFD1D6DC607000A16C9 /* YSCommentCell.m */,
+				CCDFBAFE1D6DC607000A16C9 /* YSCommentCell.xib */,
+				CCDFBAFF1D6DC607000A16C9 /* YSFooterView.h */,
+				CCDFBB001D6DC607000A16C9 /* YSFooterView.m */,
+				CCDFBB011D6DC607000A16C9 /* YSFooterView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDFBAD71D6DC5C9000A16C9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBAD81D6DC5C9000A16C9 /* Controller */,
+				CCDFBADD1D6DC5C9000A16C9 /* Model */,
+				CCDFBAE01D6DC5C9000A16C9 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CCDFBAD81D6DC5C9000A16C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBADB1D6DC5C9000A16C9 /* YSHomeViewController.h */,
+				CCDFBADC1D6DC5C9000A16C9 /* YSHomeViewController.m */,
+				CCDFBAD91D6DC5C9000A16C9 /* YSHomeInfoViewController.h */,
+				CCDFBADA1D6DC5C9000A16C9 /* YSHomeInfoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCDFBADD1D6DC5C9000A16C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBADE1D6DC5C9000A16C9 /* YSHomeListModel.h */,
+				CCDFBADF1D6DC5C9000A16C9 /* YSHomeListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCDFBAE01D6DC5C9000A16C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDFBAE11D6DC5C9000A16C9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBAE21D6DC5C9000A16C9 /* Controller */,
+				CCDFBAE71D6DC5C9000A16C9 /* Model */,
+				CCDFBAE81D6DC5C9000A16C9 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CCDFBAE21D6DC5C9000A16C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBAE51D6DC5C9000A16C9 /* YSProfileViewController.h */,
+				CCDFBAE61D6DC5C9000A16C9 /* YSProfileViewController.m */,
+				CCDFBAE31D6DC5C9000A16C9 /* YSProfileInfoViewController.h */,
+				CCDFBAE41D6DC5C9000A16C9 /* YSProfileInfoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCDFBAE71D6DC5C9000A16C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCDFBAE81D6DC5C9000A16C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBAE91D6DC5C9000A16C9 /* YSProfileHeader.h */,
+				CCDFBAEA1D6DC5C9000A16C9 /* YSProfileHeader.m */,
+				CCDFBAEB1D6DC5C9000A16C9 /* YSProfileHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,13 +691,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC3EB72D1D63F7EF000E775B /* LaunchScreen.storyboard in Resources */,
+				CCDFBAEF1D6DC5C9000A16C9 /* YSLoginViewController.xib in Resources */,
+				CCDFBAFB1D6DC5C9000A16C9 /* YSProfileHeader.xib in Resources */,
+				CCDFBAF01D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib in Resources */,
+				CCDFBB061D6DC607000A16C9 /* YSCommentCell.xib in Resources */,
+				CCDFBB081D6DC607000A16C9 /* YSFooterView.xib in Resources */,
 				CC3EB75E1D63F99A000E775B /* Assets.xcassets in Resources */,
-				CC63CF111D69D52500C52E63 /* YSProFileHeader.xib in Resources */,
-				CC7251C11D65F17700639FB7 /* YSPhoneRegisterViewController.xib in Resources */,
 				CC2326811D66FFC8000EDC4B /* arrow@2x.png in Resources */,
-				CC3EB7811D640C1E000E775B /* YSRegisterViewController.xib in Resources */,
-				CC3EB7801D640C1E000E775B /* YSLoginViewController.xib in Resources */,
+				CCDFBAF11D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib in Resources */,
 				CC3EB7281D63F7EF000E775B /* Main.storyboard in Resources */,
+				CC3194DC1D6DDCA70061DF76 /* YSStatusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,35 +759,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDFBAED1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m in Sources */,
+				CC3194DB1D6DDCA70061DF76 /* YSStatusCell.m in Sources */,
 				CC2326801D66FFC8000EDC4B /* NSString+QYString.m in Sources */,
+				CCDFBAF71D6DC5C9000A16C9 /* YSHomeListModel.m in Sources */,
+				CCDFBB051D6DC607000A16C9 /* YSCommentCell.m in Sources */,
+				CCDFBAFA1D6DC5C9000A16C9 /* YSProfileHeader.m in Sources */,
+				CC2D6C3A1D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m in Sources */,
+				CCDFBAF81D6DC5C9000A16C9 /* YSProfileInfoViewController.m in Sources */,
+				CCDFBB131D6DC65E000A16C9 /* YSUserModel.m in Sources */,
+				CCDFBB071D6DC607000A16C9 /* YSFooterView.m in Sources */,
+				CCDFBB121D6DC65E000A16C9 /* YSStatusModel.m in Sources */,
 				CC2326861D66FFC8000EDC4B /* PINGifRefreshHeader.m in Sources */,
-				CC3EB79C1D648814000E775B /* YSAddViewController.m in Sources */,
-				CC63CF0F1D69D51500C52E63 /* YSProFileHeader.m in Sources */,
-				CC3EB7691D6408F9000E775B /* YSProfileViewController.m in Sources */,
 				CC3EB75D1D63F99A000E775B /* YSNavigationViewController.m in Sources */,
-				CC7251BE1D65F15C00639FB7 /* YSPhoneRegisterViewController.m in Sources */,
 				CC3EB7591D63F99A000E775B /* AppDelegate.m in Sources */,
+				CCDFBAEE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m in Sources */,
 				CC3EB7871D64861F000E775B /* YSTabBar.m in Sources */,
-				CC3EB7991D6487E8000E775B /* YSDynamicViewController.m in Sources */,
-				CC234D971D66F5E400FE939B /* YSHomeInfoViewController.m in Sources */,
+				CCDFBAF21D6DC5C9000A16C9 /* YSAddViewController.m in Sources */,
 				CC2326851D66FFC8000EDC4B /* PINNormalRefreshFooter.m in Sources */,
 				CC2326871D66FFC8000EDC4B /* PINNormalRefreshHeader.m in Sources */,
-				CC3EB7661D6408C9000E775B /* YSHomeViewController.m in Sources */,
 				CC3EB75A1D63F99A000E775B /* YSGuideViewController.m in Sources */,
+				CCDFBAEC1D6DC5C9000A16C9 /* YSLoginViewController.m in Sources */,
 				CC23268A1D66FFC8000EDC4B /* UIView+PINFrame.m in Sources */,
-				CC3EB7771D640A8D000E775B /* YSRegisterViewController.m in Sources */,
 				CC2326841D66FFC8000EDC4B /* PINGifRefreshFooter.m in Sources */,
 				CC3EB75B1D63F99A000E775B /* YSBeiJingScrollView.m in Sources */,
 				CC2326891D66FFC8000EDC4B /* UIScrollView+PINRefresh.m in Sources */,
 				CC3EB71F1D63F7EF000E775B /* main.m in Sources */,
-				CC63CF0C1D69D29400C52E63 /* YSProfileInfoViewController.m in Sources */,
+				CCDFBAF31D6DC5C9000A16C9 /* YSDiscoverViewController.m in Sources */,
+				CCDFBB111D6DC65E000A16C9 /* YSCommentModel.m in Sources */,
+				CCDFBAF91D6DC5C9000A16C9 /* YSProfileViewController.m in Sources */,
+				CC75282E1D6EEB570024D105 /* YSInfoDynamicViewController.m in Sources */,
 				CC2326821D66FFC8000EDC4B /* PINBaseRefreshControl.m in Sources */,
+				CCDFBAF61D6DC5C9000A16C9 /* YSHomeViewController.m in Sources */,
+				CCDFBAF41D6DC5C9000A16C9 /* YSDynamicViewController.m in Sources */,
 				CC2326831D66FFC8000EDC4B /* PINAutoRefreshFooter.m in Sources */,
+				CCDFBAF51D6DC5C9000A16C9 /* YSHomeInfoViewController.m in Sources */,
 				CC3EB75C1D63F99A000E775B /* MainTabBarViewController.m in Sources */,
-				CC3EB77C1D640ADD000E775B /* YSLoginViewController.m in Sources */,
 				CC2326881D66FFC8000EDC4B /* UIScrollView+PINExtension.m in Sources */,
-				CC234D941D66F11D00FE939B /* YSHomeListModel.m in Sources */,
-				CC3EB7921D6486F0000E775B /* YSDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

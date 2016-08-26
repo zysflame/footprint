@@ -30,7 +30,7 @@
     if (interval <= 60) { // 一分钟内
         strDateDes = @"刚刚";
     } else if (interval <= 60 * 60) { // 一个小时内
-        strDateDes = [NSString stringWithFormat:@"%ld分钟前", (NSInteger)interval / 60 + 1];
+        strDateDes = [NSString stringWithFormat:@"%ld分钟前",  (NSInteger)interval / 60 + 1];
     } else if (interval <= 60 * 60 * 24) { // 几个小时之前
         strDateDes = [NSString stringWithFormat:@"%ld小时前", (NSInteger)interval / (60 * 60) + 1];
     } else { // 几天前
