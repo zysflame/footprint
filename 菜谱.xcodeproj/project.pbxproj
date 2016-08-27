@@ -19,6 +19,10 @@
 		CC2326881D66FFC8000EDC4B /* UIScrollView+PINExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CC23267B1D66FFC8000EDC4B /* UIScrollView+PINExtension.m */; };
 		CC2326891D66FFC8000EDC4B /* UIScrollView+PINRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CC23267D1D66FFC8000EDC4B /* UIScrollView+PINRefresh.m */; };
 		CC23268A1D66FFC8000EDC4B /* UIView+PINFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CC23267F1D66FFC8000EDC4B /* UIView+PINFrame.m */; };
+		CC2C5B2E1D71293B0040F60B /* status.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC2C5B2D1D71293B0040F60B /* status.plist */; };
+		CC2C5B311D71313B0040F60B /* YSListDisCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C5B301D71313B0040F60B /* YSListDisCoverViewController.m */; };
+		CC2C5B361D713F960040F60B /* YSDengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C5B351D713F960040F60B /* YSDengLuViewController.m */; };
+		CC2C5B391D7142A20040F60B /* YSZhuCeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C5B381D7142A20040F60B /* YSZhuCeViewController.m */; };
 		CC2D6C3A1D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */; };
 		CC3194DB1D6DDCA70061DF76 /* YSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3194D91D6DDCA70061DF76 /* YSStatusCell.m */; };
 		CC3194DC1D6DDCA70061DF76 /* YSStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3194DA1D6DDCA70061DF76 /* YSStatusCell.xib */; };
@@ -32,6 +36,7 @@
 		CC3EB75D1D63F99A000E775B /* YSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7531D63F99A000E775B /* YSNavigationViewController.m */; };
 		CC3EB75E1D63F99A000E775B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3EB7571D63F99A000E775B /* Assets.xcassets */; };
 		CC3EB7871D64861F000E775B /* YSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7861D64861F000E775B /* YSTabBar.m */; };
+		CC6DC5C41D70802B000778BC /* YSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6DC5C31D70802B000778BC /* YSAnnotation.m */; };
 		CC75282E1D6EEB570024D105 /* YSInfoDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */; };
 		CCDFBAEC1D6DC5C9000A16C9 /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */; };
 		CCDFBAED1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */; };
@@ -83,6 +88,13 @@
 		CC23267D1D66FFC8000EDC4B /* UIScrollView+PINRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PINRefresh.m"; sourceTree = "<group>"; };
 		CC23267E1D66FFC8000EDC4B /* UIView+PINFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PINFrame.h"; sourceTree = "<group>"; };
 		CC23267F1D66FFC8000EDC4B /* UIView+PINFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PINFrame.m"; sourceTree = "<group>"; };
+		CC2C5B2D1D71293B0040F60B /* status.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = status.plist; sourceTree = "<group>"; };
+		CC2C5B2F1D71313B0040F60B /* YSListDisCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSListDisCoverViewController.h; sourceTree = "<group>"; };
+		CC2C5B301D71313B0040F60B /* YSListDisCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSListDisCoverViewController.m; sourceTree = "<group>"; };
+		CC2C5B341D713F960040F60B /* YSDengLuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDengLuViewController.h; sourceTree = "<group>"; };
+		CC2C5B351D713F960040F60B /* YSDengLuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDengLuViewController.m; sourceTree = "<group>"; };
+		CC2C5B371D7142A20040F60B /* YSZhuCeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSZhuCeViewController.h; sourceTree = "<group>"; };
+		CC2C5B381D7142A20040F60B /* YSZhuCeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSZhuCeViewController.m; sourceTree = "<group>"; };
 		CC2D6C381D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneNumYanZhengVC.h; sourceTree = "<group>"; };
 		CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneNumYanZhengVC.m; sourceTree = "<group>"; };
 		CC3194D81D6DDCA70061DF76 /* YSStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSStatusCell.h; sourceTree = "<group>"; };
@@ -107,6 +119,8 @@
 		CC3EB7581D63F99A000E775B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CC3EB7851D64861F000E775B /* YSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTabBar.h; sourceTree = "<group>"; };
 		CC3EB7861D64861F000E775B /* YSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSTabBar.m; sourceTree = "<group>"; };
+		CC6DC5C21D70802B000778BC /* YSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSAnnotation.h; sourceTree = "<group>"; };
+		CC6DC5C31D70802B000778BC /* YSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSAnnotation.m; sourceTree = "<group>"; };
 		CC75282C1D6EEB570024D105 /* YSInfoDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSInfoDynamicViewController.h; sourceTree = "<group>"; };
 		CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSInfoDynamicViewController.m; sourceTree = "<group>"; };
 		CCDFBABA1D6DC5C9000A16C9 /* YSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginViewController.h; sourceTree = "<group>"; };
@@ -231,6 +245,32 @@
 				CC2326791D66FFC8000EDC4B /* PINNormalRefreshHeader.m */,
 			);
 			path = PINRefreshHeader;
+			sourceTree = "<group>";
+		};
+		CC2C5B321D713D190040F60B /* 原来的 */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFBABA1D6DC5C9000A16C9 /* YSLoginViewController.h */,
+				CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */,
+				CCDFBABE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.h */,
+				CCDFBABF1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m */,
+				CCDFBABC1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.h */,
+				CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */,
+				CC2D6C381D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.h */,
+				CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */,
+			);
+			name = "原来的";
+			sourceTree = "<group>";
+		};
+		CC2C5B331D713D500040F60B /* 最新 */ = {
+			isa = PBXGroup;
+			children = (
+				CC2C5B341D713F960040F60B /* YSDengLuViewController.h */,
+				CC2C5B351D713F960040F60B /* YSDengLuViewController.m */,
+				CC2C5B371D7142A20040F60B /* YSZhuCeViewController.h */,
+				CC2C5B381D7142A20040F60B /* YSZhuCeViewController.m */,
+			);
+			path = "最新";
 			sourceTree = "<group>";
 		};
 		CC3EB7111D63F7EF000E775B = {
@@ -377,6 +417,7 @@
 		CC3EB7561D63F99A000E775B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CC2C5B2D1D71293B0040F60B /* status.plist */,
 				CC3EB7571D63F99A000E775B /* Assets.xcassets */,
 				CC3EB7581D63F99A000E775B /* PrefixHeader.pch */,
 			);
@@ -409,14 +450,8 @@
 		CCDFBAB91D6DC5C9000A16C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CCDFBABA1D6DC5C9000A16C9 /* YSLoginViewController.h */,
-				CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */,
-				CCDFBABE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.h */,
-				CCDFBABF1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m */,
-				CCDFBABC1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.h */,
-				CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */,
-				CC2D6C381D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.h */,
-				CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */,
+				CC2C5B331D713D500040F60B /* 最新 */,
+				CC2C5B321D713D190040F60B /* 原来的 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -486,6 +521,8 @@
 			children = (
 				CCDFBACD1D6DC5C9000A16C9 /* YSDiscoverViewController.h */,
 				CCDFBACE1D6DC5C9000A16C9 /* YSDiscoverViewController.m */,
+				CC2C5B2F1D71313B0040F60B /* YSListDisCoverViewController.h */,
+				CC2C5B301D71313B0040F60B /* YSListDisCoverViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -493,6 +530,8 @@
 		CCDFBACF1D6DC5C9000A16C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC6DC5C21D70802B000778BC /* YSAnnotation.h */,
+				CC6DC5C31D70802B000778BC /* YSAnnotation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -700,6 +739,7 @@
 				CC2326811D66FFC8000EDC4B /* arrow@2x.png in Resources */,
 				CCDFBAF11D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib in Resources */,
 				CC3EB7281D63F7EF000E775B /* Main.storyboard in Resources */,
+				CC2C5B2E1D71293B0040F60B /* status.plist in Resources */,
 				CC3194DC1D6DDCA70061DF76 /* YSStatusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,10 +799,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6DC5C41D70802B000778BC /* YSAnnotation.m in Sources */,
+				CC2C5B391D7142A20040F60B /* YSZhuCeViewController.m in Sources */,
 				CCDFBAED1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m in Sources */,
 				CC3194DB1D6DDCA70061DF76 /* YSStatusCell.m in Sources */,
 				CC2326801D66FFC8000EDC4B /* NSString+QYString.m in Sources */,
 				CCDFBAF71D6DC5C9000A16C9 /* YSHomeListModel.m in Sources */,
+				CC2C5B361D713F960040F60B /* YSDengLuViewController.m in Sources */,
 				CCDFBB051D6DC607000A16C9 /* YSCommentCell.m in Sources */,
 				CCDFBAFA1D6DC5C9000A16C9 /* YSProfileHeader.m in Sources */,
 				CC2D6C3A1D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m in Sources */,
@@ -779,6 +822,7 @@
 				CC2326851D66FFC8000EDC4B /* PINNormalRefreshFooter.m in Sources */,
 				CC2326871D66FFC8000EDC4B /* PINNormalRefreshHeader.m in Sources */,
 				CC3EB75A1D63F99A000E775B /* YSGuideViewController.m in Sources */,
+				CC2C5B311D71313B0040F60B /* YSListDisCoverViewController.m in Sources */,
 				CCDFBAEC1D6DC5C9000A16C9 /* YSLoginViewController.m in Sources */,
 				CC23268A1D66FFC8000EDC4B /* UIView+PINFrame.m in Sources */,
 				CC2326841D66FFC8000EDC4B /* PINGifRefreshFooter.m in Sources */,

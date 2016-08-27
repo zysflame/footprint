@@ -18,8 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self loadDefaultSetting];
 }
+
+#pragma mark 加载默认设置
+- (void)loadDefaultSetting{
+    self.view.backgroundColor = YSColorRandom;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

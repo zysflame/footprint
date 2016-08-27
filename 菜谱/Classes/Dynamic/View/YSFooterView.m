@@ -24,7 +24,6 @@
         footer = [[[NSBundle mainBundle] loadNibNamed:@"YSFooterView" owner:nil options:nil] firstObject];
         [footer setValue:strId forKey:@"reuseIdentifier"];
     }
-    
     return footer;
 }
 
@@ -34,15 +33,15 @@
     // 一定要想到awakeFromNib
 }
 
-//- (void)setStatus:(YSStatusModel *)status {
-//    _status = status;
+- (void)setStatus:(YSStatusModel *)status {
+    _status = status;
 //    NSLog(@"");
-//    
-//    // 如果这个数字大于0 , 显示这个数字, 否则显示原有的转发, 赞, 评论
-//    [self loadTitle:@"转发" count:status.repostsCount forButton:_btnRetweet];
-//    [self loadTitle:@"评论" count:status.commentsCount forButton:_btnComment];
-//    [self loadTitle:@"点赞" count:status.attitudesCount forButton:_btnPraise];
-//}
+    
+    // 如果这个数字大于0 , 显示这个数字, 否则显示原有的转发, 赞, 评论
+    [self loadTitle:@"转发" count:status.repostsCount forButton:_btnRetweet];
+    [self loadTitle:@"评论" count:status.commentsCount forButton:_btnComment];
+    [self loadTitle:@"点赞" count:status.attitudesCount forButton:_btnPraise];
+}
 
 - (void)loadTitle:(NSString *)title count:(NSInteger)count forButton:(UIButton *)button {
     if (count == 0) {

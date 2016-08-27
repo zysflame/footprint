@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-//@class YSStatusModel;
+@class YSStatusModel;
 
 @interface YSFooterView : UITableViewHeaderFooterView
 
-//@property (nonatomic, strong) YSStatusModel *status;
+@property (nonatomic, strong) YSStatusModel *status;
 
 + (instancetype)footerViewWithTableView:(UITableView *)tableView;
 

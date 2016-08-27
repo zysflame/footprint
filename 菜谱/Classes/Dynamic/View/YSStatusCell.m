@@ -59,47 +59,47 @@
     self.btnHead.layer.masksToBounds = YES;
 }
 
-//- (void)setStatus:(YSStatusModel *)status {
-//    _status = status;
-//    
-//    // 设置头像
-//    NSURL *url = [NSURL URLWithString:status.user.strProfileImageUrl];
-//    [self.btnHead sd_setBackgroundImageWithURL:url forState:UIControlStateNormal];
-//    
-//    // 设置昵称
-//    self.lblName.text = status.user.strScreenName;
-//    
-//    // 设置创建时间
-//    self.lblTime.text = status.strTimeDes;
-//    
-//    // 设置来源
-//    self.lblSource.text = status.strSourceDes;
-//    
-//    // 设置微博内容
-//    self.lblContent.text = status.strText;
-//    
-//    // 转发
-//    YSStatusModel *retweetedStatus = status.retweetedStatus;
-//    if (retweetedStatus == nil) { // 没有转发
-//        self.lblRetweetContent.text = nil;
-//        
-//        // 如果有图片就设置图片
-//        [self loadImageURLs:status.arrPicUrls forView:self.viewContentImages];
-//        [self loadImageURLs:nil forView:self.viewRetweetImages];
-//        
-//        self.lcBottomRetweetImage.constant = 0;
-//        self.lcBottomRetweetContent.constant = 0;
-//        
-//    } else { // 转发
-//        self.lblRetweetContent.text = retweetedStatus.strText;
-//        
-//        [self loadImageURLs:nil forView:self.viewContentImages];
-//        [self loadImageURLs:retweetedStatus.arrPicUrls forView:self.viewRetweetImages];
-//        
-//        self.lcBottomRetweetImage.constant = 8;
-//        self.lcBottomRetweetContent.constant = 8;
-//    }
-//}
+- (void)setStatus:(YSStatusModel *)status {
+    _status = status;
+    
+    // 设置头像
+    NSURL *url = [NSURL URLWithString:status.user.strProfileImageUrl];
+    [self.btnHead sd_setBackgroundImageWithURL:url forState:UIControlStateNormal];
+    
+    // 设置昵称
+    self.lblName.text = status.user.strScreenName;
+    
+    // 设置创建时间
+    self.lblTime.text = status.strTimeDes;
+    
+    // 设置来源
+    self.lblSource.text = status.strSourceDes;
+    
+    // 设置微博内容
+    self.lblContent.text = status.strText;
+    
+    // 转发
+    YSStatusModel *retweetedStatus = status.retweetedStatus;
+    if (retweetedStatus == nil) { // 没有转发
+        self.lblRetweetContent.text = nil;
+        
+        // 如果有图片就设置图片
+        [self loadImageURLs:status.arrPicUrls forView:self.viewContentImages];
+        [self loadImageURLs:nil forView:self.viewRetweetImages];
+        
+        self.lcBottomRetweetImage.constant = 0;
+        self.lcBottomRetweetContent.constant = 0;
+        
+    } else { // 转发
+        self.lblRetweetContent.text = retweetedStatus.strText;
+        
+        [self loadImageURLs:nil forView:self.viewContentImages];
+        [self loadImageURLs:retweetedStatus.arrPicUrls forView:self.viewRetweetImages];
+        
+        self.lcBottomRetweetImage.constant = 8;
+        self.lcBottomRetweetContent.constant = 8;
+    }
+}
 
 - (void)loadImageURLs:(NSArray *)arrURLs forView:(UIView *)view {
     // 清除之前添加的所有的ImageView

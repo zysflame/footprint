@@ -25,7 +25,7 @@
     NSTimeInterval interval =[dateNow timeIntervalSinceDate:datePunlish];
     
     // 4, 根据时间差的结果进行分类, 刚刚(1分钟内), 几分钟前, 几个小时之前, 几天前.....
-    NSLog(@"---------%f", interval);
+//    NSLog(@"---------%f", interval);
     NSString *strDateDes = nil;
     if (interval <= 60) { // 一分钟内
         strDateDes = @"刚刚";

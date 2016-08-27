@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-//@class YSStatusModel;
+@class YSStatusModel;
 
 @interface YSStatusCell : UITableViewCell
 
-//@property (nonatomic, strong) YSStatusModel *status;
+@property (nonatomic, strong) YSStatusModel *status;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 

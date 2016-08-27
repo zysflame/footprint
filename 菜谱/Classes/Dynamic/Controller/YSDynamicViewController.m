@@ -7,16 +7,37 @@
 //
 
 #import "YSDynamicViewController.h"
+#import "YSInfoDynamicViewController.h"
+#import "YSStatusModel.h"
 
 #import "YSStatusCell.h"
+#import "YSFooterView.h"
 
 @interface YSDynamicViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
 
+@property (nonatomic, copy) NSArray *arrDataModels;
+
 @end
 
 @implementation YSDynamicViewController
+
+- (NSArray *)arrDataModels{
+    if (!_arrDataModels) {
+        NSString *strFilePath=[[NSBundle mainBundle] pathForResource:@"status" ofType:@"plist"];
+        NSDictionary *dicStatuses=[NSDictionary dictionaryWithContentsOfFile:strFilePath];
+        NSArray *arrStatuses=dicStatuses[@"statuses"];
+        NSMutableArray *arrMStatusModels=[NSMutableArray arrayWithCapacity:arrStatuses.count];
+        for (NSDictionary *dicData in arrStatuses) {
+            YSStatusModel *status = [YSStatusModel statusModelWithDictionary:dicData];
+            [arrMStatusModels addObject:status];
+        }
+        _arrDataModels = [arrMStatusModels copy];
+
+    }
+    return _arrDataModels;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,20 +53,53 @@
 //    lable.text = @"展示关注的好友的动态，以及自己发表的动态";
     
     self.automaticallyAdjustsScrollViewInsets = YES;
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.view addSubview:tableView];
     tableView.dataSource = self;
     tableView.delegate = self;
     self.tableView = tableView;
+    tableView.sectionFooterHeight = 30;
+    tableView.estimatedRowHeight = 40;
 }
 
 #pragma mark  > UITableViewDataSource -- UITableViewDelegate<
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 50;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.arrDataModels.count;
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     YSStatusCell *statusCell = [YSStatusCell cellWithTableView:tableView];
+    YSStatusModel *status = self.arrDataModels[indexPath.section];
+    statusCell.status = status;
     return statusCell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    YSFooterView *footer = [YSFooterView footerViewWithTableView:tableView];
+    footer.contentView.backgroundColor = [UIColor whiteColor];
+    footer.status = self.arrDataModels[section];
+    return footer;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 取消IndexPath位置cell的选中状态
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+     YSInfoDynamicViewController *homeInfoVC = [YSInfoDynamicViewController new];
+    [self.navigationController pushViewController:homeInfoVC animated:YES];
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 0.01;
+    } else {
+        return 20;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

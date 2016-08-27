@@ -65,7 +65,7 @@
         } else {
             NSLog(@"登录失败>>>%@",error);
             __weak typeof(self) weakSelf = self;
-            UIAlertController *alertContorller = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"登录失败请重试。。。" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertContorller = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"账号密码错误请重试。。。" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }];

@@ -8,13 +8,15 @@
 
 #import "YSHomeViewController.h"
 
+#import "YSDengLuViewController.h"
 #import "YSLoginViewController.h"
 #import "YSHomeInfoViewController.h"
 
 #import "YSHomeListModel.h"
 
 #import "YSStatusCell.h"
-
+#import "YSFooterView.h"
+#import "YSStatusModel.h"
 
 static NSInteger page = 1;
 @interface YSHomeViewController () <UITableViewDelegate,UITableViewDataSource>
@@ -22,11 +24,28 @@ static NSInteger page = 1;
 @property (nonatomic, weak) UITableView *tableView;
 
 /** 存放模型的数组*/
-@property (nonatomic, strong) NSMutableArray *arrMData;
+@property (nonatomic, strong) NSMutableArray *arrDataModels;
 
 @end
 
 @implementation YSHomeViewController
+
+- (NSArray *)arrDataModels{
+    if (!_arrDataModels) {
+        NSString *strFilePath=[[NSBundle mainBundle] pathForResource:@"status" ofType:@"plist"];
+        NSDictionary *dicStatuses=[NSDictionary dictionaryWithContentsOfFile:strFilePath];
+        NSArray *arrStatuses=dicStatuses[@"statuses"];
+        NSMutableArray *arrMStatusModels=[NSMutableArray arrayWithCapacity:arrStatuses.count];
+        for (NSDictionary *dicData in arrStatuses) {
+            YSStatusModel *status = [YSStatusModel statusModelWithDictionary:dicData];
+            [arrMStatusModels addObject:status];
+        }
+        _arrDataModels = [arrMStatusModels copy];
+        
+    }
+    return _arrDataModels;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,12 +58,13 @@ static NSInteger page = 1;
     self.view.backgroundColor = YSColorRandom;
 //    self.automaticallyAdjustsScrollViewInsets = NO;
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.view addSubview:tableView];
     tableView.dataSource = self;
     tableView.delegate = self;
     self.tableView = tableView;
-    
+    tableView.sectionFooterHeight = 30;
+    tableView.estimatedRowHeight = 40;
 //    __weak typeof(self) weakSelf = self;
 //    [self.tableView addGifRefreshHeaderWithClosure:^{
 //        [weakSelf loadNewData];
@@ -57,7 +77,6 @@ static NSInteger page = 1;
 #pragma mark  > 刷新加载新的数据 <
 - (void)loadNewData{
     page += 1;
-    //    [self sendRequest];
     [self requestInformation];
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -80,12 +99,12 @@ static NSInteger page = 1;
         NSDictionary *dic = (NSDictionary *)responseObject;
         NSDictionary *dicData = dic[@"data"];
         NSArray *arrTemp = dicData[@"list"];
-        weakSelf.arrMData = [NSMutableArray arrayWithCapacity:arrTemp.count];
+        weakSelf.arrDataModels = [NSMutableArray arrayWithCapacity:arrTemp.count];
         for (NSDictionary *dicList in arrTemp) {
             YSHomeListModel *homeListModel = [YSHomeListModel homeListModelWithDictionary:dicList];
-            [weakSelf.arrMData addObject:homeListModel];
+            [weakSelf.arrDataModels addObject:homeListModel];
         }
-        NSLog(@">>>>>arrData %ld",(unsigned long)weakSelf.arrMData.count);
+        NSLog(@">>>>>arrData %ld",(unsigned long)weakSelf.arrDataModels.count);
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView reloadData];
         });
@@ -107,7 +126,6 @@ static NSInteger page = 1;
     
 }
 
-
 #pragma mark 加载导航栏设置
 - (void)loadNavigationSetting{
     UIBarButtonItem *itemProfile = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_user"] style:UIBarButtonItemStylePlain target:self action:@selector(clickTheUserAction)];
@@ -116,18 +134,50 @@ static NSInteger page = 1;
 
 #pragma mark  > 点击用户后跳转到登录界面 <
 - (void)clickTheUserAction{
-    YSLoginViewController *loginVC = [YSLoginViewController new];
-    [self.navigationController pushViewController:loginVC animated:YES];
+//    YSLoginViewController *loginVC = [YSLoginViewController new];
+//    [self.navigationController pushViewController:loginVC animated:YES];
+    YSDengLuViewController *dengluVC = [YSDengLuViewController new];
+    [self.navigationController pushViewController:dengluVC animated:YES];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.arrDataModels.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     YSStatusCell *statusCell = [YSStatusCell cellWithTableView:tableView];
+    YSStatusModel *status = self.arrDataModels[indexPath.section];
+    statusCell.status = status;
     return statusCell;
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    YSFooterView *footer = [YSFooterView footerViewWithTableView:tableView];
+    footer.contentView.backgroundColor = [UIColor whiteColor];
+    footer.status = self.arrDataModels[section];
+    return footer;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 取消IndexPath位置cell的选中状态
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    YSHomeInfoViewController *homeInfoVC = [YSHomeInfoViewController new];
+    [self.navigationController pushViewController:homeInfoVC animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 0.01;
+    } else {
+        return 20;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
