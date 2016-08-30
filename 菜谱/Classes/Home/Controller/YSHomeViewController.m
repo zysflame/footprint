@@ -8,7 +8,6 @@
 
 #import "YSHomeViewController.h"
 
-#import "YSDengLuViewController.h"
 #import "YSLoginViewController.h"
 #import "YSHomeInfoViewController.h"
 
@@ -134,10 +133,8 @@ static NSInteger page = 1;
 
 #pragma mark  > 点击用户后跳转到登录界面 <
 - (void)clickTheUserAction{
-//    YSLoginViewController *loginVC = [YSLoginViewController new];
-//    [self.navigationController pushViewController:loginVC animated:YES];
-    YSDengLuViewController *dengluVC = [YSDengLuViewController new];
-    [self.navigationController pushViewController:dengluVC animated:YES];
+    YSLoginViewController *loginVC = [YSLoginViewController new];
+    [self.navigationController pushViewController:loginVC animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

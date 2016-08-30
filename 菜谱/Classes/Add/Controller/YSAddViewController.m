@@ -9,7 +9,9 @@
 #import "YSAddViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface YSAddViewController () <UIImagePickerControllerDelegate,UITextViewDelegate>
+#import "TZImagePickerController.h"
+
+@interface YSAddViewController () <UIImagePickerControllerDelegate,UITextViewDelegate,TZImagePickerControllerDelegate>
 /** 获取的图片*/
 @property (nonatomic, weak) UIImageView *getImv;
 /** 获取的图片的数组*/
@@ -34,12 +36,8 @@
     self.navigationItem.title = @"添加";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-//    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(80, 100, 200, 200)];
-//    [self.view addSubview:lable];
-//    lable.numberOfLines = 0;
-//    lable.text = @"添加动态，主要是包含图片与文字，图片支持本地选择与直接拍照";
     
-    self.arrMImages = [NSMutableArray arrayWithCapacity:3];
+    self.arrMImages = [NSMutableArray arrayWithCapacity:5];
     
     UITextView *textBack = [UITextView new];
     [self.view addSubview:textBack];
@@ -83,11 +81,27 @@
 
 #pragma mark  > 展示图片的方法 <
 - (void)showAlbume{
-    UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
-    pickerVC.delegate = (id)self;
-    pickerVC.allowsEditing = NO;
-    pickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self presentViewController:pickerVC animated:YES completion:nil];
+    
+    
+    TZImagePickerController *imagepickerVC = [[TZImagePickerController alloc] initWithMaxImagesCount:4 delegate:self];
+    __weak typeof(self) weakSelf = self;
+    [imagepickerVC setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isCan) {
+        [weakSelf.arrMImages addObjectsFromArray:photos];
+        [weakSelf loadImageViews];
+    }];
+    [self presentViewController:imagepickerVC animated:YES completion:nil];
+    
+//    UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
+//    pickerVC.delegate = (id)self;
+//    pickerVC.allowsEditing = NO;
+//    pickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    [self presentViewController:pickerVC animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto {
+//    [self.arrMImages addObjectsFromArray:photos];
+//    [self loadImageViews];
+//    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark  > 加载图片 <
@@ -137,6 +151,12 @@
             }];
         }
     }
+//    if (count > 5) {
+//        UIAlertController *alertContorller = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"添加照片请不要超过六张" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleDefault handler:nil];
+//        [alertContorller addAction:alertAction];
+//        [self presentViewController:alertContorller animated:YES completion:nil];
+//    }
 }
 
 #pragma mark  > 添加按钮 <

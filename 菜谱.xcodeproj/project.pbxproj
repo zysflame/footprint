@@ -21,9 +21,6 @@
 		CC23268A1D66FFC8000EDC4B /* UIView+PINFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CC23267F1D66FFC8000EDC4B /* UIView+PINFrame.m */; };
 		CC2C5B2E1D71293B0040F60B /* status.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC2C5B2D1D71293B0040F60B /* status.plist */; };
 		CC2C5B311D71313B0040F60B /* YSListDisCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C5B301D71313B0040F60B /* YSListDisCoverViewController.m */; };
-		CC2C5B361D713F960040F60B /* YSDengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C5B351D713F960040F60B /* YSDengLuViewController.m */; };
-		CC2C5B391D7142A20040F60B /* YSZhuCeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C5B381D7142A20040F60B /* YSZhuCeViewController.m */; };
-		CC2D6C3A1D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */; };
 		CC3194DB1D6DDCA70061DF76 /* YSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3194D91D6DDCA70061DF76 /* YSStatusCell.m */; };
 		CC3194DC1D6DDCA70061DF76 /* YSStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3194DA1D6DDCA70061DF76 /* YSStatusCell.xib */; };
 		CC3EB71F1D63F7EF000E775B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB71E1D63F7EF000E775B /* main.m */; };
@@ -38,11 +35,8 @@
 		CC3EB7871D64861F000E775B /* YSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7861D64861F000E775B /* YSTabBar.m */; };
 		CC6DC5C41D70802B000778BC /* YSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6DC5C31D70802B000778BC /* YSAnnotation.m */; };
 		CC75282E1D6EEB570024D105 /* YSInfoDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */; };
-		CCDFBAEC1D6DC5C9000A16C9 /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */; };
-		CCDFBAED1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */; };
-		CCDFBAEE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBABF1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m */; };
+		CCD03B521D72E95400B47B51 /* registered.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD03B511D72E95400B47B51 /* registered.storyboard */; };
 		CCDFBAEF1D6DC5C9000A16C9 /* YSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */; };
-		CCDFBAF01D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAC31D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib */; };
 		CCDFBAF11D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */; };
 		CCDFBAF21D6DC5C9000A16C9 /* YSAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBAC81D6DC5C9000A16C9 /* YSAddViewController.m */; };
 		CCDFBAF31D6DC5C9000A16C9 /* YSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBACE1D6DC5C9000A16C9 /* YSDiscoverViewController.m */; };
@@ -61,6 +55,10 @@
 		CCDFBB111D6DC65E000A16C9 /* YSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB0C1D6DC65E000A16C9 /* YSCommentModel.m */; };
 		CCDFBB121D6DC65E000A16C9 /* YSStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB0E1D6DC65E000A16C9 /* YSStatusModel.m */; };
 		CCDFBB131D6DC65E000A16C9 /* YSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB101D6DC65E000A16C9 /* YSUserModel.m */; };
+		CCF3C29D1D75B7D6005EFAA9 /* YSEMaileRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3C2961D75B7D6005EFAA9 /* YSEMaileRegisterViewController.m */; };
+		CCF3C29E1D75B7D6005EFAA9 /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3C2981D75B7D6005EFAA9 /* YSLoginViewController.m */; };
+		CCF3C29F1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3C29A1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m */; };
+		CCF3C2A01D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3C29C1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,12 +89,6 @@
 		CC2C5B2D1D71293B0040F60B /* status.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = status.plist; sourceTree = "<group>"; };
 		CC2C5B2F1D71313B0040F60B /* YSListDisCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSListDisCoverViewController.h; sourceTree = "<group>"; };
 		CC2C5B301D71313B0040F60B /* YSListDisCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSListDisCoverViewController.m; sourceTree = "<group>"; };
-		CC2C5B341D713F960040F60B /* YSDengLuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDengLuViewController.h; sourceTree = "<group>"; };
-		CC2C5B351D713F960040F60B /* YSDengLuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDengLuViewController.m; sourceTree = "<group>"; };
-		CC2C5B371D7142A20040F60B /* YSZhuCeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSZhuCeViewController.h; sourceTree = "<group>"; };
-		CC2C5B381D7142A20040F60B /* YSZhuCeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSZhuCeViewController.m; sourceTree = "<group>"; };
-		CC2D6C381D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneNumYanZhengVC.h; sourceTree = "<group>"; };
-		CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneNumYanZhengVC.m; sourceTree = "<group>"; };
 		CC3194D81D6DDCA70061DF76 /* YSStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSStatusCell.h; sourceTree = "<group>"; };
 		CC3194D91D6DDCA70061DF76 /* YSStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSStatusCell.m; sourceTree = "<group>"; };
 		CC3194DA1D6DDCA70061DF76 /* YSStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSStatusCell.xib; sourceTree = "<group>"; };
@@ -123,14 +115,8 @@
 		CC6DC5C31D70802B000778BC /* YSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSAnnotation.m; sourceTree = "<group>"; };
 		CC75282C1D6EEB570024D105 /* YSInfoDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSInfoDynamicViewController.h; sourceTree = "<group>"; };
 		CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSInfoDynamicViewController.m; sourceTree = "<group>"; };
-		CCDFBABA1D6DC5C9000A16C9 /* YSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginViewController.h; sourceTree = "<group>"; };
-		CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginViewController.m; sourceTree = "<group>"; };
-		CCDFBABC1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneRegisterViewController.h; sourceTree = "<group>"; };
-		CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneRegisterViewController.m; sourceTree = "<group>"; };
-		CCDFBABE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMaileRegisterViewController.h; sourceTree = "<group>"; };
-		CCDFBABF1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMaileRegisterViewController.m; sourceTree = "<group>"; };
+		CCD03B511D72E95400B47B51 /* registered.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = registered.storyboard; sourceTree = "<group>"; };
 		CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSLoginViewController.xib; sourceTree = "<group>"; };
-		CCDFBAC31D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSPhoneRegisterViewController.xib; sourceTree = "<group>"; };
 		CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSEMaileRegisterViewController.xib; sourceTree = "<group>"; };
 		CCDFBAC71D6DC5C9000A16C9 /* YSAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSAddViewController.h; sourceTree = "<group>"; };
 		CCDFBAC81D6DC5C9000A16C9 /* YSAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSAddViewController.m; sourceTree = "<group>"; };
@@ -163,6 +149,14 @@
 		CCDFBB0E1D6DC65E000A16C9 /* YSStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSStatusModel.m; sourceTree = "<group>"; };
 		CCDFBB0F1D6DC65E000A16C9 /* YSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUserModel.h; sourceTree = "<group>"; };
 		CCDFBB101D6DC65E000A16C9 /* YSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUserModel.m; sourceTree = "<group>"; };
+		CCF3C2951D75B7D6005EFAA9 /* YSEMaileRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMaileRegisterViewController.h; sourceTree = "<group>"; };
+		CCF3C2961D75B7D6005EFAA9 /* YSEMaileRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMaileRegisterViewController.m; sourceTree = "<group>"; };
+		CCF3C2971D75B7D6005EFAA9 /* YSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginViewController.h; sourceTree = "<group>"; };
+		CCF3C2981D75B7D6005EFAA9 /* YSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoginViewController.m; sourceTree = "<group>"; };
+		CCF3C2991D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneNumYanZhengVC.h; sourceTree = "<group>"; };
+		CCF3C29A1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneNumYanZhengVC.m; sourceTree = "<group>"; };
+		CCF3C29B1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneRegisterViewController.h; sourceTree = "<group>"; };
+		CCF3C29C1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneRegisterViewController.m; sourceTree = "<group>"; };
 		D4E4C20E4F4205211DFEFD82 /* libPods-菜谱.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-菜谱.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -245,32 +239,6 @@
 				CC2326791D66FFC8000EDC4B /* PINNormalRefreshHeader.m */,
 			);
 			path = PINRefreshHeader;
-			sourceTree = "<group>";
-		};
-		CC2C5B321D713D190040F60B /* 原来的 */ = {
-			isa = PBXGroup;
-			children = (
-				CCDFBABA1D6DC5C9000A16C9 /* YSLoginViewController.h */,
-				CCDFBABB1D6DC5C9000A16C9 /* YSLoginViewController.m */,
-				CCDFBABE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.h */,
-				CCDFBABF1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m */,
-				CCDFBABC1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.h */,
-				CCDFBABD1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m */,
-				CC2D6C381D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.h */,
-				CC2D6C391D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m */,
-			);
-			name = "原来的";
-			sourceTree = "<group>";
-		};
-		CC2C5B331D713D500040F60B /* 最新 */ = {
-			isa = PBXGroup;
-			children = (
-				CC2C5B341D713F960040F60B /* YSDengLuViewController.h */,
-				CC2C5B351D713F960040F60B /* YSDengLuViewController.m */,
-				CC2C5B371D7142A20040F60B /* YSZhuCeViewController.h */,
-				CC2C5B381D7142A20040F60B /* YSZhuCeViewController.m */,
-			);
-			path = "最新";
 			sourceTree = "<group>";
 		};
 		CC3EB7111D63F7EF000E775B = {
@@ -450,8 +418,14 @@
 		CCDFBAB91D6DC5C9000A16C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC2C5B331D713D500040F60B /* 最新 */,
-				CC2C5B321D713D190040F60B /* 原来的 */,
+				CCF3C2951D75B7D6005EFAA9 /* YSEMaileRegisterViewController.h */,
+				CCF3C2961D75B7D6005EFAA9 /* YSEMaileRegisterViewController.m */,
+				CCF3C2971D75B7D6005EFAA9 /* YSLoginViewController.h */,
+				CCF3C2981D75B7D6005EFAA9 /* YSLoginViewController.m */,
+				CCF3C29B1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.h */,
+				CCF3C29C1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m */,
+				CCF3C2991D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.h */,
+				CCF3C29A1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -467,7 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */,
-				CCDFBAC31D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib */,
+				CCD03B511D72E95400B47B51 /* registered.storyboard */,
 				CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */,
 			);
 			path = View;
@@ -732,7 +706,6 @@
 				CC3EB72D1D63F7EF000E775B /* LaunchScreen.storyboard in Resources */,
 				CCDFBAEF1D6DC5C9000A16C9 /* YSLoginViewController.xib in Resources */,
 				CCDFBAFB1D6DC5C9000A16C9 /* YSProfileHeader.xib in Resources */,
-				CCDFBAF01D6DC5C9000A16C9 /* YSPhoneRegisterViewController.xib in Resources */,
 				CCDFBB061D6DC607000A16C9 /* YSCommentCell.xib in Resources */,
 				CCDFBB081D6DC607000A16C9 /* YSFooterView.xib in Resources */,
 				CC3EB75E1D63F99A000E775B /* Assets.xcassets in Resources */,
@@ -740,6 +713,7 @@
 				CCDFBAF11D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib in Resources */,
 				CC3EB7281D63F7EF000E775B /* Main.storyboard in Resources */,
 				CC2C5B2E1D71293B0040F60B /* status.plist in Resources */,
+				CCD03B521D72E95400B47B51 /* registered.storyboard in Resources */,
 				CC3194DC1D6DDCA70061DF76 /* YSStatusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -800,15 +774,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6DC5C41D70802B000778BC /* YSAnnotation.m in Sources */,
-				CC2C5B391D7142A20040F60B /* YSZhuCeViewController.m in Sources */,
-				CCDFBAED1D6DC5C9000A16C9 /* YSPhoneRegisterViewController.m in Sources */,
 				CC3194DB1D6DDCA70061DF76 /* YSStatusCell.m in Sources */,
 				CC2326801D66FFC8000EDC4B /* NSString+QYString.m in Sources */,
 				CCDFBAF71D6DC5C9000A16C9 /* YSHomeListModel.m in Sources */,
-				CC2C5B361D713F960040F60B /* YSDengLuViewController.m in Sources */,
 				CCDFBB051D6DC607000A16C9 /* YSCommentCell.m in Sources */,
 				CCDFBAFA1D6DC5C9000A16C9 /* YSProfileHeader.m in Sources */,
-				CC2D6C3A1D6F0D6400EEB151 /* YSPhoneNumYanZhengVC.m in Sources */,
+				CCF3C2A01D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m in Sources */,
 				CCDFBAF81D6DC5C9000A16C9 /* YSProfileInfoViewController.m in Sources */,
 				CCDFBB131D6DC65E000A16C9 /* YSUserModel.m in Sources */,
 				CCDFBB071D6DC607000A16C9 /* YSFooterView.m in Sources */,
@@ -816,16 +787,16 @@
 				CC2326861D66FFC8000EDC4B /* PINGifRefreshHeader.m in Sources */,
 				CC3EB75D1D63F99A000E775B /* YSNavigationViewController.m in Sources */,
 				CC3EB7591D63F99A000E775B /* AppDelegate.m in Sources */,
-				CCDFBAEE1D6DC5C9000A16C9 /* YSEMaileRegisterViewController.m in Sources */,
 				CC3EB7871D64861F000E775B /* YSTabBar.m in Sources */,
 				CCDFBAF21D6DC5C9000A16C9 /* YSAddViewController.m in Sources */,
 				CC2326851D66FFC8000EDC4B /* PINNormalRefreshFooter.m in Sources */,
 				CC2326871D66FFC8000EDC4B /* PINNormalRefreshHeader.m in Sources */,
 				CC3EB75A1D63F99A000E775B /* YSGuideViewController.m in Sources */,
 				CC2C5B311D71313B0040F60B /* YSListDisCoverViewController.m in Sources */,
-				CCDFBAEC1D6DC5C9000A16C9 /* YSLoginViewController.m in Sources */,
 				CC23268A1D66FFC8000EDC4B /* UIView+PINFrame.m in Sources */,
+				CCF3C29D1D75B7D6005EFAA9 /* YSEMaileRegisterViewController.m in Sources */,
 				CC2326841D66FFC8000EDC4B /* PINGifRefreshFooter.m in Sources */,
+				CCF3C29F1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m in Sources */,
 				CC3EB75B1D63F99A000E775B /* YSBeiJingScrollView.m in Sources */,
 				CC2326891D66FFC8000EDC4B /* UIScrollView+PINRefresh.m in Sources */,
 				CC3EB71F1D63F7EF000E775B /* main.m in Sources */,
@@ -838,6 +809,7 @@
 				CCDFBAF41D6DC5C9000A16C9 /* YSDynamicViewController.m in Sources */,
 				CC2326831D66FFC8000EDC4B /* PINAutoRefreshFooter.m in Sources */,
 				CCDFBAF51D6DC5C9000A16C9 /* YSHomeInfoViewController.m in Sources */,
+				CCF3C29E1D75B7D6005EFAA9 /* YSLoginViewController.m in Sources */,
 				CC3EB75C1D63F99A000E775B /* MainTabBarViewController.m in Sources */,
 				CC2326881D66FFC8000EDC4B /* UIScrollView+PINExtension.m in Sources */,
 			);
@@ -958,7 +930,7 @@
 				INFOPLIST_FILE = "菜谱/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qingyun.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hnqingyun.memories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -973,7 +945,7 @@
 				INFOPLIST_FILE = "菜谱/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qingyun.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hnqingyun.memories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

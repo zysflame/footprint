@@ -10,10 +10,11 @@
 #import "YSProfileInfoViewController.h"
 
 #import "YSLoginViewController.h"
+#import "TZImagePickerController.h"
 
 #import "YSProfileHeader.h"
 
-@interface YSProfileViewController () <UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate>
+@interface YSProfileViewController () <UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,TZImagePickerControllerDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
 /** 存放标题的数组*/
@@ -55,13 +56,18 @@
     YSProfileHeader *infoView = [YSProfileHeader profileHeaderView];
      __weak typeof(self) weakSelf = self;
     [infoView setBlkClickTheHeaderBtn:^(UIButton *button) {
-//        NSLog(@"点击了头像按钮");
         weakSelf.headerBtn = button;
-        UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
-        pickerVC.delegate = (id)self;
-        pickerVC.allowsEditing = NO;
-        pickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [weakSelf presentViewController:pickerVC animated:YES completion:nil];
+        TZImagePickerController *imagepicker = [[TZImagePickerController alloc] initWithMaxImagesCount:1 delegate:self];
+        [imagepicker setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assest, BOOL isCan) {
+            [button setBackgroundImage:photos[0] forState:UIControlStateNormal];
+        }];
+        [weakSelf presentViewController:imagepicker animated:YES completion:nil];
+        
+//        UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
+//        pickerVC.delegate = (id)self;
+//        pickerVC.allowsEditing = NO;
+//        pickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//        [weakSelf presentViewController:pickerVC animated:YES completion:nil];
         
         
     }];
@@ -151,8 +157,11 @@
 
 #pragma mark  > 点击资料设置后触发的方法 <
 - (void)settingInformation{
-    YSProfileInfoViewController *infoVC = [YSProfileInfoViewController new];
+    UIStoryboard *infoSB = [UIStoryboard storyboardWithName:@"registered" bundle:nil];
+    UIViewController *infoVC = [infoSB instantiateViewControllerWithIdentifier:@"YSProfileInfoViewController"];
     [self.navigationController pushViewController:infoVC animated:YES];
+//    YSProfileInfoViewController *infoVC = [YSProfileInfoViewController new];
+//    [self.navigationController pushViewController:infoVC animated:YES];
 }
 
 #pragma mark  > 帮助控制器 <

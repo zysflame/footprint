@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txfPhoneNum;
 
 @property (weak, nonatomic) IBOutlet UITextField *txfYanZhengMa;
-@property (weak, nonatomic) IBOutlet UITextField *txfFirstPwd;
+@property (weak, nonatomic) IBOutlet UITextField *txfPsaaword;
 
 @end
 
@@ -27,7 +27,7 @@
 
 #pragma mark 加载默认设置
 - (void)loadDefaultSetting{
-    self.title = @"手机号一键注册";
+    self.title = @"手机号注册";
     
 }
 
@@ -48,18 +48,21 @@
     }];
 }
 #pragma mark  > 注册按钮触发的事件 <
-- (IBAction)zhuCeBtn:(UIButton *)sender {
-    if (self.txfPhoneNum.text == nil || self.txfFirstPwd.text == nil ) {
+- (IBAction)zhuCeNextBtn:(UIButton *)sender {
+    if (self.txfPhoneNum.text == nil || self.txfPsaaword.text == nil ) {
         return;
     }
     AVUser *user = [AVUser user];
     user.username = self.txfPhoneNum.text;
-    user.password = self.txfFirstPwd.text;
+    user.password = self.txfPsaaword.text;
 //    user.email = @"hang@leancloud.rocks";
     user.mobilePhoneNumber = self.txfPhoneNum.text;
     NSError *error = nil;
     [user signUp:&error];
     
+    UIStoryboard *registeredSB = [UIStoryboard storyboardWithName:@"registered" bundle:nil];
+    UIViewController *registeredVC = [registeredSB instantiateViewControllerWithIdentifier:@"YSPhoneNumYanZhengVC"];
+    [self.navigationController pushViewController:registeredVC animated:YES];
 }
 
 #pragma mark  > 点击屏幕后编辑结束 <

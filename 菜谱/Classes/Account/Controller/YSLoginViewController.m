@@ -31,9 +31,13 @@
 
 #pragma mark  > 注册按钮触发的方法 <
 - (IBAction)ZhuCeBtn:(UIButton *)sender {
+    UIStoryboard *registeredSB = [UIStoryboard storyboardWithName:@"registered" bundle:nil];
+    UIViewController *registeredVC = [registeredSB instantiateViewControllerWithIdentifier:@"YSPhoneRegisterViewController"];
+    [self.navigationController pushViewController:registeredVC animated:YES];
     
-    YSEMaileRegisterViewController *registerVC = [YSEMaileRegisterViewController new];
-    [self.navigationController pushViewController:registerVC animated:YES];
+    
+//    YSEMaileRegisterViewController *registerVC = [YSEMaileRegisterViewController new];
+//    [self.navigationController pushViewController:registerVC animated:YES];
 }
 
 #pragma mark  > 忘记密码的操作 <
