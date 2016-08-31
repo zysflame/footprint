@@ -33,6 +33,7 @@
 		CC3EB75D1D63F99A000E775B /* YSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7531D63F99A000E775B /* YSNavigationViewController.m */; };
 		CC3EB75E1D63F99A000E775B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3EB7571D63F99A000E775B /* Assets.xcassets */; };
 		CC3EB7871D64861F000E775B /* YSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3EB7861D64861F000E775B /* YSTabBar.m */; };
+		CC5DFCFC1D76E32D0099A3CA /* YSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFCFB1D76E32D0099A3CA /* YSLocationManager.m */; };
 		CC6DC5C41D70802B000778BC /* YSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6DC5C31D70802B000778BC /* YSAnnotation.m */; };
 		CC75282E1D6EEB570024D105 /* YSInfoDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */; };
 		CCD03B521D72E95400B47B51 /* registered.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD03B511D72E95400B47B51 /* registered.storyboard */; };
@@ -108,9 +109,11 @@
 		CC3EB7521D63F99A000E775B /* YSNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSNavigationViewController.h; sourceTree = "<group>"; };
 		CC3EB7531D63F99A000E775B /* YSNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSNavigationViewController.m; sourceTree = "<group>"; };
 		CC3EB7571D63F99A000E775B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC3EB7581D63F99A000E775B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CC3EB7851D64861F000E775B /* YSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTabBar.h; sourceTree = "<group>"; };
 		CC3EB7861D64861F000E775B /* YSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSTabBar.m; sourceTree = "<group>"; };
+		CC5DFCF91D76E1020099A3CA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CC5DFCFA1D76E32D0099A3CA /* YSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLocationManager.h; sourceTree = "<group>"; };
+		CC5DFCFB1D76E32D0099A3CA /* YSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLocationManager.m; sourceTree = "<group>"; };
 		CC6DC5C21D70802B000778BC /* YSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSAnnotation.h; sourceTree = "<group>"; };
 		CC6DC5C31D70802B000778BC /* YSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSAnnotation.m; sourceTree = "<group>"; };
 		CC75282C1D6EEB570024D105 /* YSInfoDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSInfoDynamicViewController.h; sourceTree = "<group>"; };
@@ -262,6 +265,7 @@
 		CC3EB71C1D63F7EF000E775B /* 菜谱 */ = {
 			isa = PBXGroup;
 			children = (
+				CC5DFCF81D76E0C70099A3CA /* Tools */,
 				CC3EB7421D63F99A000E775B /* Main */,
 				CCDFBAB71D6DC5C9000A16C9 /* Classes */,
 				CC3EB7341D63F99A000E775B /*  Libraries */,
@@ -387,9 +391,18 @@
 			children = (
 				CC2C5B2D1D71293B0040F60B /* status.plist */,
 				CC3EB7571D63F99A000E775B /* Assets.xcassets */,
-				CC3EB7581D63F99A000E775B /* PrefixHeader.pch */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		CC5DFCF81D76E0C70099A3CA /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CC5DFCF91D76E1020099A3CA /* PrefixHeader.pch */,
+				CC5DFCFA1D76E32D0099A3CA /* YSLocationManager.h */,
+				CC5DFCFB1D76E32D0099A3CA /* YSLocationManager.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		CCDFBAB71D6DC5C9000A16C9 /* Classes */ = {
@@ -789,6 +802,7 @@
 				CC3EB7591D63F99A000E775B /* AppDelegate.m in Sources */,
 				CC3EB7871D64861F000E775B /* YSTabBar.m in Sources */,
 				CCDFBAF21D6DC5C9000A16C9 /* YSAddViewController.m in Sources */,
+				CC5DFCFC1D76E32D0099A3CA /* YSLocationManager.m in Sources */,
 				CC2326851D66FFC8000EDC4B /* PINNormalRefreshFooter.m in Sources */,
 				CC2326871D66FFC8000EDC4B /* PINNormalRefreshHeader.m in Sources */,
 				CC3EB75A1D63F99A000E775B /* YSGuideViewController.m in Sources */,
@@ -926,7 +940,7 @@
 			baseConfigurationReference = B2D562325362028CEECAA5E5 /* Pods-菜谱.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "菜谱/Resource/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "菜谱/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "菜谱/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -941,7 +955,7 @@
 			baseConfigurationReference = C00245FB0598FDC358C8080C /* Pods-菜谱.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "菜谱/Resource/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "菜谱/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "菜谱/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

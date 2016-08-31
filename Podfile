@@ -17,6 +17,8 @@ pod 'SVProgressHUD', '~> 2.0.3'
 pod 'MJExtension', '~> 3.0.13'
 pod 'MJRefresh', '~> 3.1.12'
 
+pod 'BaiduMapKit', '~> 3.0.0'
+
 pod 'TZImagePickerController'   # 拍照第三方
 
   # Pods for 菜谱

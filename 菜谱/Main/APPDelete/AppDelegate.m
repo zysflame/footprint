@@ -12,7 +12,12 @@
 #import "YSNavigationViewController.h"
 #import "YSLoginViewController.h"
 
-@interface AppDelegate ()
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+
+@interface AppDelegate () <BMKGeneralDelegate>
+
+/** 创建的一个百度地图的管理*/
+@property (nonatomic, strong) BMKMapManager *bManager;
 
 @end
 
@@ -37,6 +42,10 @@
     
     [AVOSCloud setApplicationId:@"6WuwHq3DabgyOgPq2V1H5yON-gzGzoHsz" clientKey:@"AwRSis2jueemKU9EbdFoXHVp"];
     
+    // 初始化管理器
+    self.bManager = [[BMKMapManager alloc] init];
+    [self.bManager start:@"EnfK2yfbCMbCXBkjmVTVT1OQ2CKGAREe" generalDelegate:self];
+    
     return YES;
 }
 
@@ -46,10 +55,17 @@
 //    self.window.rootViewController = navgVC;
     
     MainTabBarViewController *mainVC = [MainTabBarViewController new];
-//     YSNavigationViewController *navgVC = [[YSNavigationViewController alloc] initWithRootViewController:mainVC];
     self.window.rootViewController = mainVC;
 }
 
+//联网状态
+-(void)onGetNetworkState:(int)iError{
+    NSLog(@"network:%d",iError);
+}
+//授权状态
+-(void)onGetPermissionState:(int)iError{
+    NSLog(@"permission:%d", iError);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
