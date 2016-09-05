@@ -39,7 +39,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="显示昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tda-AL-clS">
-                    <rect key="frame" x="176" y="8" width="60" height="25.5"/>
+                    <rect key="frame" x="190" y="8" width="60" height="25.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="0Un-X8-0Ck"/>
                     </constraints>
@@ -51,8 +51,8 @@
                         </mask>
                     </variation>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="用户名--手机号或者邮箱号" placeholder="显示昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-Jw-OnE">
-                    <rect key="frame" x="189" y="41" width="171" height="26"/>
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="显示昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-Jw-OnE">
+                    <rect key="frame" x="189" y="41" width="60" height="26"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="uJY-Bb-X1R"/>
                     </constraints>
@@ -75,7 +75,7 @@
                 <constraint firstItem="Tda-AL-clS" firstAttribute="top" secondItem="mug-Gc-NNc" secondAttribute="top" id="LYN-Bw-m0H"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aFa-Jw-OnE" secondAttribute="trailing" constant="8" id="Lqx-1M-7nZ"/>
                 <constraint firstItem="LXt-Tc-QNf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Mtp-TR-5KB"/>
-                <constraint firstItem="Tda-AL-clS" firstAttribute="leading" secondItem="mug-Gc-NNc" secondAttribute="trailing" constant="16" id="Sne-kr-dPA"/>
+                <constraint firstItem="Tda-AL-clS" firstAttribute="leading" secondItem="mug-Gc-NNc" secondAttribute="trailing" constant="30" id="Sne-kr-dPA"/>
                 <constraint firstItem="mug-Gc-NNc" firstAttribute="leading" secondItem="LXt-Tc-QNf" secondAttribute="trailing" constant="19" id="Ucy-wr-cWz"/>
                 <constraint firstItem="mug-Gc-NNc" firstAttribute="top" secondItem="LXt-Tc-QNf" secondAttribute="top" id="WO2-kD-VuD"/>
                 <constraint firstItem="aFa-Jw-OnE" firstAttribute="top" secondItem="75Y-ED-zGV" secondAttribute="top" id="Y6N-KX-BCK"/>
@@ -87,6 +87,7 @@
             <connections>
                 <outlet property="headerBtn" destination="LXt-Tc-QNf" id="5li-lE-tnc"/>
                 <outlet property="nickName" destination="Tda-AL-clS" id="B1J-C4-U6n"/>
+                <outlet property="txfUserName" destination="aFa-Jw-OnE" id="wVK-as-NLZ"/>
             </connections>
             <point key="canvasLocation" x="459" y="49"/>
         </view>

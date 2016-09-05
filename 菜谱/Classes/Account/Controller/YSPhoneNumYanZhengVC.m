@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *txfYanZhengMa;
 
 @property (weak, nonatomic) IBOutlet UIButton *getNewNumBtn;
+/** 计时器*/
+@property (nonatomic, strong) NSTimer *timer;
+/** 计时器计数*/
+@property (nonatomic,assign) NSInteger count;
 
 @end
 
@@ -28,7 +32,45 @@
 
 #pragma mark 加载默认设置
 - (void)loadDefaultSetting{
-    self.title = @"验证账号";
+    self.title = @"验证码验证";
+    self.count = 60;
+    // 初始化计时器
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+    
+}
+
+#pragma mark  > 获取新的验证码 <
+- (IBAction)getNewNumBtn:(UIButton *)sender {
+    self.count = 60;
+    // 初始化计时器
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+    AVUser *currentUser = [AVUser currentUser];
+    NSString *strPhoneNum = currentUser.username;
+    [AVUser requestMobilePhoneVerify:strPhoneNum withBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded){
+            //发送成功
+            UIAlertController *alertContorller = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"新的验证码已发送，请稍等片刻" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+                
+            }];
+            [alertContorller addAction:alertAction];
+            [self presentViewController:alertContorller animated:YES completion:nil];
+        }
+    }];
+}
+
+#pragma mark  > 计时器走的 <
+- (void)timerFire:(NSTimer *)timer{
+    self.count -= 1;
+    if (self.count < 0) {
+        self.getNewNumBtn.enabled = YES;
+        self.count = 60;
+        [self.timer invalidate];  // 计时器失效
+    }else{
+        self.getNewNumBtn.enabled = NO;
+        self.getNewNumBtn.titleLabel.text = [NSString stringWithFormat:@"%luS可重发",self.count];
+        [self.getNewNumBtn setTitle:[NSString stringWithFormat:@"%luS可重发",self.count] forState: UIControlStateDisabled];
+    }
 }
 
 #pragma mark  > 点击验证按钮后的操作 <
@@ -96,6 +138,4 @@
  }
  */
 
-- (IBAction)getNewNumBtn:(UIButton *)sender {
-}
 @end

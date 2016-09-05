@@ -50,12 +50,18 @@
 }
 
 - (void)loadMainController{
-//    YSLoginViewController *loginVC = [YSLoginViewController new];
-//    YSNavigationViewController *navgVC = [[YSNavigationViewController alloc] initWithRootViewController:loginVC];
-//    self.window.rootViewController = navgVC;
-    
-    MainTabBarViewController *mainVC = [MainTabBarViewController new];
-    self.window.rootViewController = mainVC;
+    AVUser *currentUser = [AVUser currentUser];
+    NSString *strUser = currentUser.username;
+    if (strUser == nil) {
+        UIStoryboard *loginSB = [UIStoryboard storyboardWithName:@"login" bundle:[NSBundle mainBundle]];
+        UIViewController *loginVC = [loginSB instantiateViewControllerWithIdentifier:@"YSLoginViewController"];
+        YSNavigationViewController *navgVC = [[YSNavigationViewController alloc] initWithRootViewController:loginVC];
+        self.window.rootViewController = navgVC;
+        
+    }else{
+        MainTabBarViewController *mainVC = [MainTabBarViewController new];
+        self.window.rootViewController = mainVC;
+    }
 }
 
 //联网状态

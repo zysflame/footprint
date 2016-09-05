@@ -10,10 +10,6 @@
 
 @interface YSProfileHeader ()
 
-@property (weak, nonatomic) IBOutlet UIButton *headerBtn;
-@property (weak, nonatomic) IBOutlet UITextField *nickName;
-
-
 @end
 
 @implementation YSProfileHeader

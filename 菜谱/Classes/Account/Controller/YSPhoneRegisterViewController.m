@@ -13,12 +13,16 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *txfPhoneNum;
 
-@property (weak, nonatomic) IBOutlet UITextField *txfYanZhengMa;
 @property (weak, nonatomic) IBOutlet UITextField *txfPsaaword;
+@property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 
 @end
 
 @implementation YSPhoneRegisterViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    self.nextBtn.enabled = YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,31 +35,25 @@
     
 }
 
-- (IBAction)getTheYanZhengMaBtn:(UIButton *)sender {
-    sender.enabled = NO;
-    if (self.txfPhoneNum.text == nil) {
-        NSLog(@"手机号不能为空");
-        return;
-    }
-    [AVUser requestMobilePhoneVerify:self.txfPhoneNum.text withBlock:^(BOOL succeeded, NSError *error) {
-        if(succeeded){
-            NSLog(@"发送成功");
-            //发送成功
-            sender.enabled = YES;
-        }else{
-            NSLog(@"发送失败>>%@",error);
-        }
-    }];
-}
+
 #pragma mark  > 注册按钮触发的事件 <
-- (IBAction)zhuCeNextBtn:(UIButton *)sender {
-    if (self.txfPhoneNum.text == nil || self.txfPsaaword.text == nil ) {
+- (IBAction)zhuCeNextBtn:(UIButton *)button {
+    
+    if ([self.txfPhoneNum.text isEqualToString:@""] || [self.txfPsaaword.text isEqualToString:@""] ) {
+        UIAlertController *alertContorller = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"请填写手机号和密码" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+            
+        }];
+        [alertContorller addAction:alertAction];
+        [self presentViewController:alertContorller animated:YES completion:nil];
         return;
     }
+    button.enabled = NO; 
+//    [button setTitle:@"请求中。。。。" forState: UIControlStateDisabled];
+    
     AVUser *user = [AVUser user];
     user.username = self.txfPhoneNum.text;
     user.password = self.txfPsaaword.text;
-//    user.email = @"hang@leancloud.rocks";
     user.mobilePhoneNumber = self.txfPhoneNum.text;
     NSError *error = nil;
     [user signUp:&error];

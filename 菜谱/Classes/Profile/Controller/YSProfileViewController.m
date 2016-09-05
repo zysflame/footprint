@@ -7,6 +7,9 @@
 //
 
 #import "YSProfileViewController.h"
+
+#import "AppDelegate.h"
+
 #import "YSProfileInfoViewController.h"
 
 #import "YSLoginViewController.h"
@@ -27,7 +30,7 @@
 
 - (NSArray *)arrTitles{
     if (!_arrTitles) {
-        _arrTitles = @[@"资料设置",@"清除缓存",@"帮助",@"功能介绍",@"切换账号",@"退出程序"];
+        _arrTitles = @[@"资料设置",@"清除缓存",@"功能介绍",@"帮助",@"切换账号",@"退出程序"];
     }
     return _arrTitles;
 }
@@ -45,7 +48,6 @@
 //    lable.numberOfLines = 0;
 //    lable.text = @"包含资料设置，好友的关注列表，自己发的自己的足迹";
     
-    
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
 //    tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0);
     [self.view addSubview:tableView];
@@ -55,6 +57,31 @@
     
     YSProfileHeader *infoView = [YSProfileHeader profileHeaderView];
      __weak typeof(self) weakSelf = self;
+    AVUser *currentUser = [AVUser currentUser];
+    infoView.txfUserName.text = currentUser.username;
+    
+    NSUserDefaults *defau = [NSUserDefaults standardUserDefaults];
+    NSData *imageData = [defau objectForKey:@"headerImage"];
+    UIImage *image = [UIImage imageWithData:imageData scale:1.0];  // 15188342749
+    [infoView.headerBtn setImage:image forState:UIControlStateNormal];
+    infoView.nickName.text = [defau objectForKey:@"nickName"];
+    
+    AVQuery *userQuery = [AVQuery queryWithClassName:@"_User"];
+    [userQuery getObjectInBackgroundWithId:currentUser.objectId block:^(AVObject *object, NSError *error) {
+        if (object) {
+            infoView.nickName.text = object[@"nickName"];
+            NSData *imageData = object[@"headerImage"];
+            if (imageData) {
+                UIImage *image = [UIImage imageWithData:imageData scale:1.0];
+                [infoView.headerBtn setBackgroundImage:image forState:UIControlStateNormal];
+            }else{
+                [infoView.headerBtn setBackgroundImage:[UIImage imageNamed:@"social-placeholder"] forState:UIControlStateNormal];
+            }
+        }else{
+            [infoView.headerBtn setBackgroundImage:[UIImage imageNamed:@"social-placeholder"] forState:UIControlStateNormal];
+        }
+    }];
+
     [infoView setBlkClickTheHeaderBtn:^(UIButton *button) {
         weakSelf.headerBtn = button;
         TZImagePickerController *imagepicker = [[TZImagePickerController alloc] initWithMaxImagesCount:1 delegate:self];
@@ -75,6 +102,7 @@
     
 }
 
+#pragma mark  >  --- UITableViewDataSource <
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3;
 }
@@ -110,6 +138,7 @@
     
     return cell;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return 0.01;
@@ -118,6 +147,7 @@
     }
 }
 
+#pragma mark  > UITableViewDelegate --- 选中后的方法 <
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 0) {
@@ -126,6 +156,7 @@
                 [self settingInformation];
                 break;
             case 1:
+                [self cleanTheMemory];
                 break;
             case 2:
                 [self helpViewController];
@@ -138,11 +169,7 @@
         }
         
     }else if (indexPath.section == 1){
-        NSLog(@"退出登录");
-        // 退出账号登录的操作；
-        YSLoginViewController *loginVC = [YSLoginViewController new];
-        [self.navigationController pushViewController:loginVC animated:YES];
-        
+        [self changeTheUser];
     }else if (indexPath.section == 2){
         // 退出程序的操作
         exit(0);
@@ -155,19 +182,21 @@
     }
 }
 
+
 #pragma mark  > 点击资料设置后触发的方法 <
 - (void)settingInformation{
     UIStoryboard *infoSB = [UIStoryboard storyboardWithName:@"registered" bundle:nil];
     UIViewController *infoVC = [infoSB instantiateViewControllerWithIdentifier:@"YSProfileInfoViewController"];
     [self.navigationController pushViewController:infoVC animated:YES];
-//    YSProfileInfoViewController *infoVC = [YSProfileInfoViewController new];
-//    [self.navigationController pushViewController:infoVC animated:YES];
+}
+
+#pragma mark  > 清除缓存的操作 <
+- (void)cleanTheMemory{
+    NSLog(@"清除缓存");
 }
 
 #pragma mark  > 帮助控制器 <
 - (void)helpViewController{
-    //    YSHelpViewController *helpVC = [YSHelpViewController new];
-    //    [self.navigationController pushViewController:helpVC animated:YES];
     
     UIAlertController *alertContorller = [UIAlertController alertControllerWithTitle:@"帮助" message:@"1、首页是推荐的\n2、随便看看是随机推荐的\n3、推荐是对早中晚三餐的推荐\n4、我的是一些基本设置" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleDefault handler:nil];
@@ -178,14 +207,30 @@
 
 #pragma mark  > 功能介绍 <
 - (void)functionViewController{
-    //    YSFunctionViewController *functionVC = [YSFunctionViewController new];
-    //    [self.navigationController pushViewController:functionVC animated:YES];
     UIAlertController *alertContorller = [UIAlertController alertControllerWithTitle:@"功能介绍" message:@"1、首页是推荐的\n2、随便看看是随机推荐的\n3、推荐是对早中晚三餐的推荐\n4、我的是一些基本设置" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleDefault handler:nil];
     
     [alertContorller addAction:alertAction];
     [self presentViewController:alertContorller animated:YES completion:nil];
 }
+
+#pragma mark  > 切换账号的操作 <
+- (void)changeTheUser{
+    NSLog(@"退出登录");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"headerImage"];
+    [defaults removeObjectForKey:@"nickName"];
+    [defaults removeObjectForKey:@"gender"];
+    [defaults removeObjectForKey:@"age"];
+    
+    [AVUser logOut];  //清除缓存用户对象
+    AVUser *currentUser = [AVUser currentUser]; // 现在的currentUser是nil了
+    NSLog(@"退出登录后>>>>%@",currentUser.username);
+    // 退出账号登录的操作；
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [app loadMainController];
+}
+
 
 #pragma mark  > UIImagePickerControllerDelegate <
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{

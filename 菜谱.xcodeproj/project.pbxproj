@@ -37,7 +37,6 @@
 		CC6DC5C41D70802B000778BC /* YSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6DC5C31D70802B000778BC /* YSAnnotation.m */; };
 		CC75282E1D6EEB570024D105 /* YSInfoDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */; };
 		CCD03B521D72E95400B47B51 /* registered.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD03B511D72E95400B47B51 /* registered.storyboard */; };
-		CCDFBAEF1D6DC5C9000A16C9 /* YSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */; };
 		CCDFBAF11D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */; };
 		CCDFBAF21D6DC5C9000A16C9 /* YSAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBAC81D6DC5C9000A16C9 /* YSAddViewController.m */; };
 		CCDFBAF31D6DC5C9000A16C9 /* YSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBACE1D6DC5C9000A16C9 /* YSDiscoverViewController.m */; };
@@ -56,10 +55,13 @@
 		CCDFBB111D6DC65E000A16C9 /* YSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB0C1D6DC65E000A16C9 /* YSCommentModel.m */; };
 		CCDFBB121D6DC65E000A16C9 /* YSStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB0E1D6DC65E000A16C9 /* YSStatusModel.m */; };
 		CCDFBB131D6DC65E000A16C9 /* YSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDFBB101D6DC65E000A16C9 /* YSUserModel.m */; };
+		CCEE49F71D7C08BA00C78CE5 /* YSUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEE49F61D7C08BA00C78CE5 /* YSUserInfoModel.m */; };
 		CCF3C29D1D75B7D6005EFAA9 /* YSEMaileRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3C2961D75B7D6005EFAA9 /* YSEMaileRegisterViewController.m */; };
 		CCF3C29E1D75B7D6005EFAA9 /* YSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3C2981D75B7D6005EFAA9 /* YSLoginViewController.m */; };
 		CCF3C29F1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3C29A1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m */; };
 		CCF3C2A01D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3C29C1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m */; };
+		CCF79CB91D782A2000640965 /* YSResetPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF79CB81D782A2000640965 /* YSResetPassWordViewController.m */; };
+		CCF79CBB1D782B3400640965 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF79CBA1D782B3400640965 /* login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,7 +121,6 @@
 		CC75282C1D6EEB570024D105 /* YSInfoDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSInfoDynamicViewController.h; sourceTree = "<group>"; };
 		CC75282D1D6EEB570024D105 /* YSInfoDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSInfoDynamicViewController.m; sourceTree = "<group>"; };
 		CCD03B511D72E95400B47B51 /* registered.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = registered.storyboard; sourceTree = "<group>"; };
-		CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSLoginViewController.xib; sourceTree = "<group>"; };
 		CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSEMaileRegisterViewController.xib; sourceTree = "<group>"; };
 		CCDFBAC71D6DC5C9000A16C9 /* YSAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSAddViewController.h; sourceTree = "<group>"; };
 		CCDFBAC81D6DC5C9000A16C9 /* YSAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSAddViewController.m; sourceTree = "<group>"; };
@@ -152,6 +153,8 @@
 		CCDFBB0E1D6DC65E000A16C9 /* YSStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSStatusModel.m; sourceTree = "<group>"; };
 		CCDFBB0F1D6DC65E000A16C9 /* YSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUserModel.h; sourceTree = "<group>"; };
 		CCDFBB101D6DC65E000A16C9 /* YSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUserModel.m; sourceTree = "<group>"; };
+		CCEE49F51D7C08BA00C78CE5 /* YSUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUserInfoModel.h; sourceTree = "<group>"; };
+		CCEE49F61D7C08BA00C78CE5 /* YSUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUserInfoModel.m; sourceTree = "<group>"; };
 		CCF3C2951D75B7D6005EFAA9 /* YSEMaileRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSEMaileRegisterViewController.h; sourceTree = "<group>"; };
 		CCF3C2961D75B7D6005EFAA9 /* YSEMaileRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSEMaileRegisterViewController.m; sourceTree = "<group>"; };
 		CCF3C2971D75B7D6005EFAA9 /* YSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoginViewController.h; sourceTree = "<group>"; };
@@ -160,6 +163,9 @@
 		CCF3C29A1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneNumYanZhengVC.m; sourceTree = "<group>"; };
 		CCF3C29B1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPhoneRegisterViewController.h; sourceTree = "<group>"; };
 		CCF3C29C1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPhoneRegisterViewController.m; sourceTree = "<group>"; };
+		CCF79CB71D782A2000640965 /* YSResetPassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSResetPassWordViewController.h; sourceTree = "<group>"; };
+		CCF79CB81D782A2000640965 /* YSResetPassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSResetPassWordViewController.m; sourceTree = "<group>"; };
+		CCF79CBA1D782B3400640965 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		D4E4C20E4F4205211DFEFD82 /* libPods-菜谱.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-菜谱.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -439,6 +445,8 @@
 				CCF3C29C1D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m */,
 				CCF3C2991D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.h */,
 				CCF3C29A1D75B7D6005EFAA9 /* YSPhoneNumYanZhengVC.m */,
+				CCF79CB71D782A2000640965 /* YSResetPassWordViewController.h */,
+				CCF79CB81D782A2000640965 /* YSResetPassWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,7 +461,7 @@
 		CCDFBAC11D6DC5C9000A16C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CCDFBAC21D6DC5C9000A16C9 /* YSLoginViewController.xib */,
+				CCF79CBA1D782B3400640965 /* login.storyboard */,
 				CCD03B511D72E95400B47B51 /* registered.storyboard */,
 				CCDFBAC41D6DC5C9000A16C9 /* YSEMaileRegisterViewController.xib */,
 			);
@@ -517,6 +525,8 @@
 		CCDFBACF1D6DC5C9000A16C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CCEE49F51D7C08BA00C78CE5 /* YSUserInfoModel.h */,
+				CCEE49F61D7C08BA00C78CE5 /* YSUserInfoModel.m */,
 				CC6DC5C21D70802B000778BC /* YSAnnotation.h */,
 				CC6DC5C31D70802B000778BC /* YSAnnotation.m */,
 			);
@@ -717,7 +727,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC3EB72D1D63F7EF000E775B /* LaunchScreen.storyboard in Resources */,
-				CCDFBAEF1D6DC5C9000A16C9 /* YSLoginViewController.xib in Resources */,
 				CCDFBAFB1D6DC5C9000A16C9 /* YSProfileHeader.xib in Resources */,
 				CCDFBB061D6DC607000A16C9 /* YSCommentCell.xib in Resources */,
 				CCDFBB081D6DC607000A16C9 /* YSFooterView.xib in Resources */,
@@ -727,6 +736,7 @@
 				CC3EB7281D63F7EF000E775B /* Main.storyboard in Resources */,
 				CC2C5B2E1D71293B0040F60B /* status.plist in Resources */,
 				CCD03B521D72E95400B47B51 /* registered.storyboard in Resources */,
+				CCF79CBB1D782B3400640965 /* login.storyboard in Resources */,
 				CC3194DC1D6DDCA70061DF76 /* YSStatusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,6 +804,7 @@
 				CCDFBAFA1D6DC5C9000A16C9 /* YSProfileHeader.m in Sources */,
 				CCF3C2A01D75B7D6005EFAA9 /* YSPhoneRegisterViewController.m in Sources */,
 				CCDFBAF81D6DC5C9000A16C9 /* YSProfileInfoViewController.m in Sources */,
+				CCF79CB91D782A2000640965 /* YSResetPassWordViewController.m in Sources */,
 				CCDFBB131D6DC65E000A16C9 /* YSUserModel.m in Sources */,
 				CCDFBB071D6DC607000A16C9 /* YSFooterView.m in Sources */,
 				CCDFBB121D6DC65E000A16C9 /* YSStatusModel.m in Sources */,
@@ -825,6 +836,7 @@
 				CCDFBAF51D6DC5C9000A16C9 /* YSHomeInfoViewController.m in Sources */,
 				CCF3C29E1D75B7D6005EFAA9 /* YSLoginViewController.m in Sources */,
 				CC3EB75C1D63F99A000E775B /* MainTabBarViewController.m in Sources */,
+				CCEE49F71D7C08BA00C78CE5 /* YSUserInfoModel.m in Sources */,
 				CC2326881D66FFC8000EDC4B /* UIScrollView+PINExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,11 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadDefaultSetting];
+    [self loadNavigationSetting];
 }
 
 #pragma mark 加载默认设置
 - (void)loadDefaultSetting{
     self.title = @"登录";
+//    self.hidesBottomBarWhenPushed = YES;
+}
+
+#pragma mark 加载导航栏设置
+- (void)loadNavigationSetting{
+    // 隐藏默认的返回按钮
+    self.navigationItem.hidesBackButton = YES;
 }
 
 #pragma mark  > 注册按钮触发的方法 <
@@ -42,7 +50,8 @@
 
 #pragma mark  > 忘记密码的操作 <
 - (IBAction)forgetThePassWordBtn:(UIButton *)sender {
-    NSLog(@">>>>%s",__func__);
+    UIViewController *resetPwdVC = [self.storyboard instantiateViewControllerWithIdentifier:@"YSResetPassWordViewController"];
+    [self.navigationController pushViewController:resetPwdVC animated:YES];
 }
 
 #pragma mark  > 登录按钮 <
@@ -73,7 +82,7 @@
             UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }];
-            UIAlertAction *alertDengLuAction = [UIAlertAction actionWithTitle:@"刷新试试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertAction *alertDengLuAction = [UIAlertAction actionWithTitle:@"重新登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 NSLog(@"刷新了一下");
             }];
             [alertContorller addAction:alertDengLuAction];

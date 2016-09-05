@@ -19,7 +19,6 @@
 /** 雷达搜索后返回的用户的数组*/
 @property (nonatomic, copy) void(^blkRadarNear)(NSArray *radarNears);
 
-
 /** 创建时用的单例*/
 + (instancetype)shareLocationManager;
 /** 开启定位服务*/

@@ -10,6 +10,10 @@
 
 @interface YSProfileHeader : UIView
 
+@property (weak, nonatomic) IBOutlet UIButton *headerBtn;
+@property (weak, nonatomic) IBOutlet UITextField *nickName;
+@property (weak, nonatomic) IBOutlet UITextField *txfUserName;
+
 @property (nonatomic, strong) void(^blkClickTheHeaderBtn)(UIButton *button);
 
 + (instancetype)profileHeaderView;

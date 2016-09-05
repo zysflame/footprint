@@ -15,7 +15,6 @@
 
 @interface YSDiscoverViewController () <CLLocationManagerDelegate,BMKMapViewDelegate>
 
-
 /** 展示地图的图层*/
 @property (nonatomic, weak) BMKMapView *mapViewBack;
 

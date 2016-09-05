@@ -129,11 +129,13 @@ static NSInteger page = 1;
 - (void)loadNavigationSetting{
     UIBarButtonItem *itemProfile = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_user"] style:UIBarButtonItemStylePlain target:self action:@selector(clickTheUserAction)];
     self.navigationItem.rightBarButtonItem = itemProfile;
+    
 }
 
 #pragma mark  > 点击用户后跳转到登录界面 <
 - (void)clickTheUserAction{
-    YSLoginViewController *loginVC = [YSLoginViewController new];
+    UIStoryboard *loginSB = [UIStoryboard storyboardWithName:@"login" bundle:[NSBundle mainBundle]];
+    UIViewController *loginVC = [loginSB instantiateViewControllerWithIdentifier:@"YSLoginViewController"];
     [self.navigationController pushViewController:loginVC animated:YES];
 }
 

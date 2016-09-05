@@ -66,8 +66,7 @@
     [self.view addSubview:albumeButton];
     self.albumeButton = albumeButton;
     albumeButton.titleLabel.font =[UIFont fontWithName:kfontBold size:18];
-    //    [albumeButton setBackgroundImage:[UIImage imageNamed:@"choosePhotoBtn"] forState:UIControlStateNormal];
-    //    [albumeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [albumeButton setImage:[UIImage imageNamed:@"btn_normal"] forState:UIControlStateNormal];
     [albumeButton setImage:[UIImage imageNamed:@"btn_normal_selected"] forState:UIControlStateSelected];
     [albumeButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -81,7 +80,6 @@
 
 #pragma mark  > 展示图片的方法 <
 - (void)showAlbume{
-    
     
     TZImagePickerController *imagepickerVC = [[TZImagePickerController alloc] initWithMaxImagesCount:4 delegate:self];
     __weak typeof(self) weakSelf = self;
